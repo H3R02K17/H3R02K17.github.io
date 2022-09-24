@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <!--Nombre de la página-->
+    <title>Koffi Soft Senderismo</title>
+    <meta charset="UTF-8">
+    <!--Importamos el css de "estilo" para modificar los contenidos de la página principal-->
+    <link type="text/css" rel="stylesheet" href="../../css/publico.css" />
+    <!--Importamos el css de Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!--Importamos el css para manejar la fuente del sitio web-->
+    <link type="text/css" rel="stylesheet" href="../../css/fuente.css">
+    <!--Importar un icono para el sitio web-->
+    <link rel="icon" type="icon/png" href="../../recursos/imgs/koffisoft_logo1.png">
+    <!--Informar al navegador que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header>
+        <div class="d-none d-md-block">
+            <!--Menú del sitio-->
+            <nav id="menu" class="navbar navbar-expand shadow">
+                <div class="container-fluid">
+                    <!--Agregamos el logo del sitio-->
+                    <a class="navbar-brand" href="#" id="logo_nav">
+                        <img src="../../recursos/imgs/koffisoft_logo1.png" alt="">
+                    </a>
+                    <div class="collapse navbar-collapse">
+                        <!--Creamos los botones que tendrá el menú-->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="boton_enlace">
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="opciones_personalizadas">
+                    <!--Creamos la opción de modo oscuro y claro-->
+                    <div id="boton_modo">
+                        <button class="btn btn-secondary btn-sm">
+                            Modo Claro
+                            <a class="switch" id="switch" onclick="ModoNocturno()">
+                                <span>
+                                    <i><img src="../../recursos/icons/sun.png" alt=""></i>
+                                </span>
+                                <span>
+                                    <i><img src="../../recursos/icons/moon.png" alt=""></i>
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+                    <!--Creamos la opción de idiomas que tendrá el sitio-->
+                    <div id="boton_idioma">
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Español<img src="../../recursos/icons/español.png">
+                            </button>
+                            <ul id="opciones" class="dropdown-menu">
+                                <a class="dropdown-item btn-sm" id="idioma" data-toggle="tooltip" data-placement="left"
+                                    data-html="true" href="../public/index.html">English<img id="imagen_idioma"
+                                        src="../../recursos/icons/england.png"></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--Menu de movil y tablets-->
+        <div class="d-md-none">
+            <nav id="menu2" class="navbar shadow">
+                <div class="container">
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                        <!--Creamos la opción de idiomas que tendrá el sitio-->
+                        <div id="boton_idioma2">
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    ES<img src="../../recursos/icons/español.png">
+                                </button>
+                                <ul id="opciones" class="dropdown-menu">
+                                    <a class="dropdown-item btn-sm" id="idioma" data-toggle="tooltip"
+                                        data-placement="left" data-html="true" href="../public/index.html">EN<img id="imagen_idioma"
+                                            src="../../recursos/icons/england.png"></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8">
+                        <!--Agregamos el logo del sitio-->
+                        <a class="navbar-brand" href="#" id="logo_nav">
+                            <img src="../../recursos/imgs/koffisoft_logo1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                        <a class="navbar-brand" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                            <img src="../../recursos/icons/menu.png" alt="" width="30" height="24">
+                        </a>
+                    </div>
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
+                        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header" id="logo_menu_movil">
+                            <img src="../../recursos/imgs/koffisoft_logo2.png" alt="logo_blanco">
+                            <button type="button" class="btn-close btn-close-white text-reset"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="boton_enlace2">
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--Contenedor del main-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="linea_vertical">
+                    <img id="vertical" src="../../recursos/imgs/senderismo/linea_vertical.png">
+                </div>
+                <div class="cafe_sticky">
+                    <img id="image-scroll" src="../../recursos/imgs/koffisoft_taza.png" class="cafeImg">
+                </div>
+                <div class="row senderismo mt-5">
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 imagen_senderismo">
+                        <img src="../../recursos/imgs/senderismo/senderismo1.jpg" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 texto_senderismo_izq">
+                        <h6>Inicio del Recorrido</h6>
+                        <p>Nuestro servicio de senderismo inicia desde el propio Koffi Soft y restaurante, luego de realizar
+                            tu orden de alimentos puedes decidir si tomar un tour guiado por uno de nuestros empleados con 
+                            un costo de $2.00 que incluye una taza de café al final del recorrido y estancia de 20 minutos en 
+                            el mirador y orilla del lago de Ilopango. La distancia del restaurante al lago es de 600 metros aproximadamente.
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 texto_senderismo_der">
+                        <h6>Experiencia del Recorrido</h6>
+                        <p>A mitad del recorrido el cuál tiene un sendero de madera y que sido construido para brindar un descenso 
+                            seguro al lago. Mientras puedes disfrutar de la brisa de los árboles y de la fauna y flora que esta alrededor. 
+                            Tomando fotos o simplemente pasandola bien en el camino.
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 imagen_senderismo">
+                        <img src="../../recursos/imgs/senderismo/senderismo2.png" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 imagen_senderismo">
+                        <img src="../../recursos/imgs/senderismo/senderismo3.png" alt="">
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6 texto_senderismo_izq">
+                        <h6>Final del Recorrido</h6>
+                        <p>El final de recorrido será a la orilla del lago donde podrás beber una taza de café de la casa, puedes hacer uso del mirador 
+                            a la orilla del lago y tomar fotografías para recordar el momento y el paisaje que te brinda el Lago de Ilopango. Luego de 
+                            los 20 minutos de estadía se realiza el recorrido de regreso para que pueda volver al restaurante a degustar de su pedido realizado.
+                        </p>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 mt-5 imagen_senderismo_final">
+                        <img src="../../recursos/imgs/senderismo/Senderismo.png" class="img-fluid" alt="lago_ilopango">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="redes_sociales">
+                    <h4>SIGUENOS</h4>
+                    <a href="" id="logo_redes"><img src="../../recursos/imgs/koffisoft_logo2.png" alt="logo"></a>
+                    <div id="redes">
+                        <a href="https://www.facebook.com/Ikal-Caf%C3%A9-SV-1092973257539952/?ref=py_c"><img
+                                src="../../recursos/icons/facebook.png" alt="facebook" class="facebook"></a>
+                        <a href="https://www.instagram.com/ikalcafe_2019/?hl=es"><img
+                                src="../../recursos/icons/instagram.png" alt="instagram" class="instagram"></a>
+                        <a href="https://www.tiktok.com/@luluzc_z?is_from_webapp=1&sender_device=pc"><img src="../../recursos/icons/tiktok.png" alt="tiktok" class="tiktok"></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                    <div class="container-fluid" id="enlaces_footer">
+                        <div class="row">
+                            <div class="col-md-1 col-lg-1 col-xl-1 col-xxl-1" id="informacion">
+                                <div class="d-none d-md-block vertical-line"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="informacion">
+                                <p>Explorar</p>
+                                <a href="index.html">Menú</a>
+                                <a href="">Reservaciones</a>
+                                <a href="ubicacion.html">Ubicación</a>
+                                <a href="senderismo.html">Senderismo</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="informacion">
+                                <p>Atención al Cliente</p>
+                                <a href="contactanos.html">Contáctanos</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="informacion">
+                                <p>Empresa</p>
+                                <a href="empresa.html">Empresa</a>
+                                <a href="creadores.html">Creadores</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="informacion">
+                                <p>Información extra</p>
+                                <a href="alergenos.html">Alergenos</a>
+                                <a href="">Descargar Menú</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3" id="informacion">
+                                <p>Políticas de Servicio</p>
+                                <a href="legal.html">Aviso Legal</a>
+                                <a href="politica_privacidad.html">Politica de Privacidad</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="terminos">
+                                <p>TÉRMINOS Y CONDICIONES DEL SITIO</p>
+                                <p>Copyright &copy; 2022 Koffi Soft. Todos los derechos reservados</p>
+                                <p>Teléfono: (503)2222-8888</p>
+                                <p>Correo electrónico: KoffiSoft@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS, luego los demás scripts -->
+    <script type="text/javascript" src="../../recursos/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../recursos/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../recursos/js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../../controladores/componentes.js"></script>
+    <script type="text/javascript" src="../../controladores/publico/online.js"></script>
+</body>
+
+</html>

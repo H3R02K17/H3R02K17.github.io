@@ -1,0 +1,4593 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    transition: all .7s ease-in-out;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/*De esta forma el footer será sticky*/
+#seccion_main {
+    margin-top: 5%;
+    display: flex;
+    min-height: 100vh;
+}
+
+/*De esta forma el footer será sticky*/
+#seccion_main_intermediario {
+    margin-top: 8%;
+}
+
+/*-------------------------------------NAV-------------------------------------*/
+
+/*Le damos un color al menú lateral izquierdo*/
+#menu {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    background-color: #4c070a;
+    color: #4a1f0e;
+}
+
+/*Le damos un color al contenedor secundario, que esta dentro del menú y contiene botones*/
+#contenedor_botones {
+    background-color: #70393b;
+    width: 80%;
+    margin-left: 20%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    border-bottom-left-radius: 45px;
+    border-top-left-radius: 45px;
+}
+
+/*---------------------------------MAIN---------------------------------*/
+/*Le quitamos el padding de los extremos*/
+#main_principal .container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*--------Titulo Superior--------*/
+
+/*Centramos la imagen que esta en el nav*/
+#logo_nav {
+    text-align: center;
+}
+
+/*Le damos un tamaño a los botones*/
+#botones {
+    padding-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-items: center !important;
+    align-items: center !important;
+    align-content: center !important;
+}
+
+/*Centramos el contenido de los botones y le damos un color a las letras*/
+#botones a {
+    color: #ffffff;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center !important;
+    align-content: center !important;
+    text-decoration: none;
+}
+
+/*Cuando el mouse este encima cambiará de color los botones*/
+#botones a:hover {
+    background-color: #ffffff;
+    color: #4c070a;
+    transition: all 0.4s ease;
+    padding-left: 2%;
+}
+
+/*Cuando el mouse este encima cambiará de color los botones*/
+#botones a.boton_activo {
+    background-color: #ffffff;
+    color: #4c070a;
+    transition: all 0.4s ease;
+    padding-left: 2%;
+}
+
+/*Le damos un color de fondo y a las letras botones del offset cuando el mouse este encima*/
+#boton_enlace a.boton_activo {
+    background-color: #ffffff;
+    color: #4c070a;
+    transition: all 0.6s ease;
+}
+
+/*Le asignamos propiedades a la imagen de los botones del nav izquierdo*/
+#botones img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/*Le asignamos propiedades a la imagen del logo del nav izquierdo*/
+#logo_nav img {
+    image-rendering: optimizeQuality;
+    filter: drop-shadow(0 0 5px #4c070a);
+    height: 150px;
+    width: 150px;
+}
+
+/*Separamos el boton de cerrar sesión*/
+#cerrar_sesion {
+    margin-top: 80px;
+    margin-bottom: 15px;
+}
+
+/*Apartado superior de titulo*/
+#apartado_superior1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: #4a1f0e;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all .7s ease-in-out;
+}
+
+/*Apartado de componetes(Fecha, Usuario, Idioma y Modo Color) le damos dirección row y otras propiedades*/
+#apartado_superior2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    color: #4a1f0e;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    transition: all .7s ease-in-out;
+}
+
+/*Le damos un margen al titulo del apartado superior*/
+#apartado_superior2 h6 {
+    margin-right: 15px;
+}
+
+/*Alineamos al final los datos del usuario*/
+#datos_usuario {
+    text-align: end;
+}
+
+/*Le damos un tamaño a la imagen del usuario del apartado superior*/
+#usuario_logo img {
+    border-radius: 100px;
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+/*Agregamos un margen a la derecha a los botones color e idioma*/
+#opciones_personalizadas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+/*Le damos un color a la fuente del boton de idiomas*/
+#boton_idioma {
+    color: #4a1f0e !important;
+}
+
+/*Le damos un tamaño a la imagen del boton de idiomas*/
+#boton_idioma img {
+    width: 25px;
+    height: 25px;
+}
+
+/*Le damos un tamaño a la imagen del boton de idiomas*/
+#boton_idioma button {
+    background-color: #cea690;
+    border-color: #cea690;
+    color: #4a1f0e !important;
+    font-weight: 500;
+}
+
+/*Le damos un color de fondo al boton desplegable*/
+.dropdown-menu {
+    background-color: #cea690 !important;
+    min-width: 115px !important;
+    max-height: 35px !important;
+}
+
+/*Le damos color de fondo y le cambiamos el color a la fuente del boton desplegable*/
+#boton_idioma a {
+    background-color: #cea690;
+    border-color: #cea690;
+    color: #4a1f0e !important;
+    font-weight: 500;
+}
+
+/*Le damos un margen izquierdo a la imagen del boton idioma*/
+#imagen_idioma {
+    margin-left: 5px;
+}
+
+/*Le damos propiedades al boton de cambio de color*/
+#boton_modo button {
+    margin-bottom: 15px;
+    height: 35px;
+    width: 140px;
+    background-color: #cea690;
+    border-color: #cea690;
+    color: #4a1f0e !important;
+    font-size: small;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Le damos propiedades a las imagenes del boton de cambio de color*/
+#boton_modo img {
+    width: 18px;
+    height: 18px;
+    padding-bottom: 2px;
+}
+
+/*Creamos un cuadrado redondeado donde estará la imagen y la bolita de switch*/
+.switch {
+    height: 25px;
+    width: 45px !important;
+    background-color: #503c3d !important;
+    border-radius: 100px;
+    border: none !important;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+}
+
+/*Creamos la bolita del switch*/
+.switch::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+/*Cuando tenga la clase active cambiará el fondo del cuadrado redondeado*/
+.switch.active {
+    background-color: #4f9b99 !important;
+}
+
+/*Cuando tenga la clase active cambiará de posición la bolita del switch a la derecha*/
+.switch.active::after {
+    left: unset;
+    right: 0;
+}
+
+/*Le damos una fondo al apartado superior donde está Titulo y componetes(Fecha, Usuario, Idioma y Modo Color)*/
+#menu2 {
+    position: relative;
+    background-color: #ffffff;
+    transition: all .7s ease-in-out;
+}
+
+/*Le damos un propiedad al apartado superior para que cuando nos desplazemos siempre se mantenga arriba*/
+#menu2.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 75%;
+    padding: 0%;
+    animation-duration: 1.5s;
+    animation-name: moviendose;
+    animation-iteration-count: 1, 0;
+}
+
+/*Animación del cambio sticky al apartado superior*/
+@keyframes moviendose {
+    0% {
+        padding: 4%;
+    }
+
+    100% {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 75%;
+        padding: 0%;
+    }
+}
+
+/*-------------------------------------Menu movil-------------------------------------*/
+/*Le asignamos un color de fondo, alineación central y color blanco a las letras del OffSet*/
+#offcanvasWithBothOptions {
+    background-color: #4c070a;
+    color: #e8d9d9;
+    text-align: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-content: space-around !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+}
+
+/*Que el contenido abarque todo el Offset*/
+.offcanvas-body {
+    width: 100%;
+}
+
+/*Le damos un tamaño a la imagen del logo del offset*/
+#logo_menu_movil img {
+    width: 160px;
+    height: 160px;
+}
+
+/*Le damos una posición al boton de cerrar del offset*/
+#logo_menu_movil button {
+    margin-top: -100px;
+    opacity: 1;
+}
+
+/*Le damos un tamaño de todo el contenedor a los botones del offset*/
+#boton_enlace a {
+    padding-left: 0%;
+    width: 100%;
+    color: #ffffff;
+}
+
+/*Le damos un color de fondo y a las letras botones del offset cuando el mouse este encima*/
+#boton_enlace a:hover {
+    width: 100%;
+    background-color: #ffffff;
+    color: #4c070a;
+    transition: all 0.6s ease;
+}
+
+/*Le damos un color a los titulos de separación del offset*/
+#boton_enlace p {
+    padding-top: 30px;
+    color: #ffffff 0.5 !important;
+    margin-bottom: 5px;
+}
+
+/*Le damos un tamaño a las imagenes de los botones del offset*/
+#boton_enlace img {
+    margin-left: 5%;
+    width: 25px;
+    height: 25px;
+}
+
+/*Le damos propiedades al boton de cambio de color*/
+#boton_modo2 button {
+    margin-bottom: 15px;
+    height: 41px;
+    width: 100%;
+    background-color: #4c070a;
+    border-color: #4c070a;
+    color: #ffffff !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Le damos propiedades a las imagenes del boton de cambio de color*/
+#boton_modo2 img {
+    width: 18px !important;
+    height: 18px !important;
+    padding-bottom: 2px;
+}
+
+/*Creamos un cuadrado redondeado donde estará la imagen y la bolita de switch*/
+.switch2 {
+    height: 25px;
+    width: 45px !important;
+    background-color: #503c3d !important;
+    border-radius: 100px;
+    border: none !important;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+}
+
+/*Creamos la bolita del switch*/
+.switch2::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+/*Cuando tenga la clase active cambiará el fondo del cuadrado redondeado*/
+.switch2.active {
+    background-color: #4f9b99 !important;
+}
+
+/*Cuando tenga la clase active cambiará de posición la bolita del switch a la derecha*/
+.switch2.active::after {
+    left: unset;
+    right: 0;
+}
+
+/*Le damos un color a la fuente del boton de idiomas*/
+#boton_idioma2 {
+    color: #ffffff;
+    margin-bottom: 5%;
+    width: 100% !important;
+}
+
+/*Le damos un tamaño a la imagen del boton de idiomas*/
+#boton_idioma2 img {
+    width: 25px;
+    height: 25px;
+}
+
+/*Le damos un tamaño a la imagen del boton de idiomas*/
+#boton_idioma2 button {
+    background-color: #4c070a;
+    border-color: #4c070a;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/*Le damos un color de fondo al boton desplegable*/
+#boton_idioma2 .dropdown-menu {
+    text-align: center;
+    width: 100%;
+    background-color: #4c070a !important;
+    max-height: 35px !important;
+}
+
+/*Le damos color de fondo y le cambiamos el color a la fuente del boton desplegable*/
+#boton_idioma2 a {
+    background-color: #4c070a;
+    border-color: #4c070a;
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+/*Le damos un color de fondo al boton desplegable cuando el mouse este encima*/
+#boton_idioma2 .dropdown-menu:hover {
+    background-color: #ffffff !important;
+    transition: all 0.4s ease;
+}
+
+/*Le damos un color a las letras al boton desplegable cuando el mouse este encima*/
+#boton_idioma2 a:hover {
+    width: 100% !important;
+    color: #4c070a !important;
+    transition: all 0.4s ease;
+}
+
+/*La imagen de salir se separa un poco del boton*/
+#salir {
+    margin-right: 5%;
+}
+
+/*-------------------------------------MAIN-------------------------------------*/
+
+/*Tarjeta de observación le agregamos color de fondo*/
+#tarjeta_ventas .card {
+    max-width: 100%;
+    border-radius: 15px !important;
+    background-color: #cea690 !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#tarjeta_ventas .card:hover {
+    box-shadow: 0 1px 1rem rgba(76, 7, 10, 1) !important;
+    transition: all 0.4s ease;
+}
+
+/*Le damos color al texto*/
+#tarjeta_ventas .card-body {
+    color: #4a1f0e;
+    max-width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/*Centramos el titulo de cada tarjeta de venta*/
+#tarjeta_ventas h6 {
+    text-align: center;
+    color: #4a1f0e;
+    margin-top: 5%;
+}
+
+/*Le damos un tamaño a las imagenes de las tarjetas de venta*/
+#tarjeta_ventas img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 25%;
+}
+
+/*Centramos el texto*/
+.datos_ventas {
+    text-align: center;
+}
+
+/*Le damos un tamaño a los textos de las tarjetas de ventas*/
+.datos_ventas p {
+    font-size: small;
+}
+
+
+/*Tarjeta de observación le quitamos el padding*/
+#tarjeta_observaciones {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+/*Centramos el titulo del apartado observaciones*/
+#tarjeta_observaciones h5 {
+    text-align: center;
+    color: #4a1f0e;
+}
+
+/*Tarjeta de observación le agregamos color de fondo*/
+#tarjeta_observaciones .card {
+    max-width: 100%;
+    border-radius: 15px !important;
+    background-color: #cea690 !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/*Tarjeta de observación le agregamos color de fondo*/
+#sombreado {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#sombreado:hover {
+    box-shadow: 0 1px 1rem rgba(76, 7, 10, 1) !important;
+    transition: all 0.4s ease;
+}
+
+/*Tarjeta de observación le agregamos color a las letras*/
+#observaciones_notificacion .card-body {
+    color: #745347;
+    max-width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px !important;
+    background-color: #ffffff !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/*Le quitamos el padding de los extremos*/
+#observaciones_notificacion {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/*Le damos un tamaño a la imagen del usuario*/
+#observaciones_notificacion img {
+    width: 40px;
+    height: 40px;
+    margin-left: 8px;
+    margin-right: 8px;
+    border-radius: 100%;
+}
+
+/*Alineamos a la izquierda el texto en columna*/
+#texto {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/*Le damos un tamaño al texto*/
+#texto p {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 12px;
+}
+
+
+#tarjeta_estadisticas {
+    padding-left: 0px;
+    padding-right: 10px;
+}
+
+/*Centramos el titulo del apartado observaciones*/
+#tarjeta_estadisticas h5 {
+    text-align: center;
+    color: #4a1f0e;
+}
+
+/*Tarjeta de observación le agregamos color de fondo*/
+#tarjeta_estadisticas .card {
+    max-width: 100%;
+    border-radius: 15px !important;
+    background-color: #cea690 !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+/*Tarjeta de observación le agregamos color a las letras*/
+#estadistica .card-body {
+    color: #745347;
+    max-width: 100%;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-radius: 15px !important;
+    background-color: #ffffff !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Le quitamos el padding de los extremos*/
+#estadistica {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+#titulo_estadisticas {
+    width: 95%;
+    height: min-content;
+    padding-bottom: 0px;
+    text-align: start !important;
+}
+
+.contenido_estadisticas {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/*Le damos un tamaño a la imagen del usuario*/
+.contenido_estadisticas img {
+    width: 30px;
+    height: 30px;
+    margin-left: 8px;
+    margin-right: 8px;
+}
+
+/*Le asignamos fuente y tamaño*/
+#texto {
+    font-size: small;
+    color: #745347;
+    font-weight: 400;
+}
+
+#texto2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+/*Le damos un tamaño al texto*/
+#texto2 p {
+    margin-top: 0%;
+    margin-bottom: 0%;
+    font-size: 12px;
+}
+
+#tabla_pedidos {
+    margin-top: 7%;
+    margin-bottom: 7%;
+    background-color: #cea690;
+    border-radius: 15px !important;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#tabla_pedidos:hover {
+    box-shadow: 0 1px 1rem rgba(76, 7, 10, 1) !important;
+    transition: all 0.4s ease;
+}
+
+#tabla_pedidos h6 {
+    color: #4a1f0e !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#tabla_pedidos th {
+    color: #4a1f0e !important;
+}
+
+#tabla_pedidos td {
+    color: #4a1f0e !important;
+}
+
+/*--------------------------Footer del sitio--------------------------*/
+
+/*Le damos un color al footer*/
+footer {
+    background-color: #f3c6a5;
+}
+
+/*Centramos la información del footer*/
+#informacion {
+    color: #4a1f0e;
+    padding-left: 25%;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    text-align: center;
+    font-size: small;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Le agregamos margen inferior al texto del footer*/
+#informacion p {
+    margin-bottom: 1px;
+}
+
+/*Alineamos todo el contenido del footer*/
+#sitio_publico {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Le damos un tamaño al logo en redes sociales*/
+#sitio_publico img {
+    image-rendering: optimizeQuality;
+    width: 80px;
+    height: 82px;
+    margin-bottom: 3%;
+    padding-bottom: 0px;
+    transition: all .7s ease-in-out;
+}
+
+/*Le agregamos un tamaño a la imagen del footer*/
+#sitio_publico img:hover {
+    filter: drop-shadow(0 0 5px #4c070a);
+    transition: all .7s ease-in-out;
+}
+
+/*Le agregamos color al boton de enlace del footer*/
+#sitio_publico a {
+    font-size: small;
+    font-weight: 500;
+    color: #4a1f0e;
+    text-decoration: none;
+}
+
+/*Le agregamos subrayado al boton de enlace del footer cuando el mouse este encima*/
+#sitio_publico a:hover {
+    text-decoration: underline;
+}
+
+/*---------------------------------------MODO NOCTURNO---------------------------------------*/
+
+body.dark {
+    background: #503c3d !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark #menu2 {
+    background-color: #503c3d;
+    transition: all .7s ease-in-out;
+}
+
+body.dark #apartado_superior1 {
+    color: #ffffff;
+    transition: all .7s ease-in-out;
+}
+
+body.dark #apartado_superior2 {
+    color: #ffffff;
+    transition: all .7s ease-in-out;
+}
+
+body.dark #tarjeta_observaciones h5 {
+    color: #ffffff;
+    transition: all .7s ease-in-out;
+}
+
+body.dark #tarjeta_estadisticas h5 {
+    color: #ffffff;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .saludo_imagen_perfil {
+    color: #ffffff;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .saludo_imagen_perfil label {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .perfil_contenido label {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .buscador img {
+    content: url("../recursos/icons/buscarw.png");
+    transition: all .7s ease-in-out;
+}
+
+body.dark .buscador_existencias img {
+    content: url("../recursos/icons/buscarw.png");
+    transition: all .7s ease-in-out;
+}
+
+
+body.dark #reservaciones_form label {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .texto_reservacion2 p {
+    color: #ffffff;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .modal-content {
+    background-color: #503c3d;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .modal-content label {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark h4.modal-title {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark h6.modal-title {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+
+/*---------------------------------------------Calendario---------------------------------------------*/
+#calendar {
+    min-width: 100%;
+    height: 100%;
+}
+
+/*----------------------------------------------SCRUD----------------------------------------------*/
+
+input {
+    color: #4a1f0e !important;
+    opacity: 100%;
+    font-weight: 400;
+    background-color: #e8d9d9 !important;
+}
+
+select {
+    color: #4a1f0e !important;
+    opacity: 100%;
+    background-color: #e8d9d9 !important;
+}
+
+textarea {
+    color: #4a1f0e !important;
+    opacity: 100%;
+    font-weight: 400;
+    background-color: #e8d9d9 !important;
+}
+
+.modal {
+    color: #4a1f0e;
+}
+
+#buscador_agregar {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.buscador_agregar_empleado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+.buscador_y_agregar_empleado {
+    display: flex;
+    flex-direction: row;
+}
+
+.buscador_ingrediente {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.buscador_ingrediente button {
+    border: none;
+    background-color: transparent;
+}
+
+.buscador_ingrediente input {
+    width: 200px;
+}
+
+.apartados_registrar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #4a1f0e;
+    margin-bottom: 15px;
+}
+
+.apartado_registrar {
+    height: 700px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    width: 47% !important;
+    margin-left: 2%;
+    padding-top: 4%;
+    border-radius: 15px;
+}
+
+.apartado_registrar p {
+    color: #057554;
+}
+
+.apartado_registrar p {
+    color: #057554;
+}
+
+.boton_estado_empleado {
+    display: flex !important;
+    flex-direction: row;
+}
+
+.boton_estado_empleado img {
+    margin-left: 10px !important;
+    height: 25px !important;
+    width: 25px !important;
+}
+
+.buscador button {
+    border: none;
+    background-color: transparent;
+}
+
+.buscador_existencias {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.buscador_existencias input {
+    width: 25%;
+}
+
+.buscador_existencias button {
+    border: none;
+    background-color: transparent;
+}
+
+.boton_estado_empleado {
+    display: flex !important;
+    flex-direction: row;
+}
+
+.boton_estado_empleado img {
+    margin-left: 10px !important;
+    height: 25px !important;
+    width: 25px !important;
+}
+
+.centrar_estadoemp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.imagen_principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.input_imagen {
+    text-align: center;
+}
+
+.imagen_principal img {
+    width: 200px;
+    height: 200px;
+    margin-top: 15px;
+    margin-bottom: 5%;
+    padding: 15px;
+    border: 1px solid rgba(76, 7, 10, 1);
+}
+
+.filtrar_ingrediente {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.filtrar_ingrediente .form-select {
+    width: 120px;
+    margin-bottom: 3%;
+}
+
+.filtrar_ingrediente_modificar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filtrar_ingrediente_modificar button {
+    width: 220px;
+    margin-bottom: 3%;
+}
+
+.filtrar_ingrediente_modificar .form-select {
+    width: 120px;
+    margin-bottom: 3%;
+}
+
+.select_ingredientes select {
+    height: 31px;
+}
+
+/*tabla*/
+#tablas_datos .table-striped tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+#tablas_datos .table-striped tr:nth-child(even) {
+    background-color: #f3c6a5;
+}
+
+#tablas_datos table {
+    border: transparent;
+}
+
+.table-bordered>:not(caption)>*>* {
+    border-width: 0 0px !important;
+}
+
+#tablas_datos tr {
+    font-size: small !important;
+}
+
+#tablas_datos thead {
+    color: #4a1f0e;
+    background-color: #cea690 !important;
+}
+
+#tablas_datos input:checked {
+    background-color: #4c070a !important;
+}
+
+.table-striped img {
+    width: 70px;
+    height: 70px;
+}
+
+.editar:hover {
+    color: #4f9b99 !important;
+    background-color: #ffffff !important;
+    border-color: #4f9b99 !important;
+}
+
+.editar:hover img {
+    content: url("../recursos/icons/modificar3.png");
+}
+
+.eliminar:hover {
+    color: #4c070a !important;
+    background-color: #ffffff !important;
+    border-color: #4c070a !important;
+}
+
+.btn-morado:hover {
+    color: #687eed !important;
+    background-color: #ffffff !important;
+    border-color: #687eed !important;
+}
+
+.btn_observaciones:hover {
+    border-color: #edab4a !important;
+    background-color: #ffffff !important;
+}
+
+.btn_ingredientes:hover {
+    border-color: #edab4a !important;
+    background-color: #ffffff !important;
+}
+
+.btn_ingredientes:hover img {
+    content: url("../recursos/icons/ingredientes3.png");
+}
+
+.btn_observaciones:hover img {
+    content: url("../recursos/icons/observaciones_personales2.png");
+}
+
+.btn-morado:hover img {
+    content: url("../recursos/icons/agregar_observacion2.png");
+}
+
+.eliminar:hover img {
+    content: url("../recursos/icons/eliminar2.png");
+}
+
+#btn_modal img {
+    width: 30px;
+    height: 30px;
+}
+
+/*Visualizador de imagenes - Adjuntadas*/
+#file_modal img {
+    display: block;
+    width: 100%;
+    display: block;
+    height: 100%;
+}
+
+.btn-success {
+    color: #ffffff !important;
+    background-color: #057554 !important;
+}
+
+.btn-info {
+    color: #ffffff !important;
+    background-color: #4f9b99 !important;
+}
+
+.btn-danger {
+    color: #ffffff !important;
+    background-color: #4c070a !important;
+}
+
+.btn-warning {
+    color: #ffffff !important;
+    background-color: #edab4a !important;
+}
+
+.btn-morado {
+    color: #ffffff !important;
+    background-color: #687eed !important;
+}
+
+.centrado {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#boton_modal {
+    text-align: center !important;
+}
+
+#modificar .modal-body {
+    text-align: start;
+    font-size: 16px;
+}
+
+.contenedor_datos_registro {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.apartado_texto_registro {
+    width: 48%;
+}
+
+.acciones_inventario {
+    width: 100%;
+    height: 200px;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#botones_acciones_inventario {
+    padding-top: 30px;
+    width: 100%;
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#tbody-rows-emple:hover {
+    cursor: pointer;
+}
+
+#tbinventario {
+    cursor: pointer;
+}
+
+.pagination {
+    justify-content: center;
+}
+
+.page-link {
+    color: #4c070a !important;
+}
+
+/*----------------------------------INVENTARIO----------------------------------*/
+
+.card.tarjeta_inventario {
+    margin-top: 8%;
+    margin-bottom: 8%;
+    background-color: #cea690 !important;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    border-radius: 15px;
+}
+
+.tarjeta_inventario .row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.tarjeta_inventario .row img {
+    margin-left: 10px;
+    border-bottom-left-radius: 0.45rem !important;
+    border-bottom-right-radius: 0.45rem !important;
+    border-top-left-radius: 0.45rem !important;
+    border-top-right-radius: 0.45rem !important;
+}
+
+.tarjeta_inventario .card-body {
+    color: #4c070a;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*----------------------------------GRAFICAS----------------------------------*/
+
+#tarjeta_estadistica img {
+    height: 150px;
+    width: 150px;
+    margin: 5%;
+}
+
+/*Tarjeta de observación le agregamos color de fondo*/
+#tarjeta_estadistica .card {
+    max-width: 100%;
+    border-radius: 15px !important;
+    background-color: #cea690 !important;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+#tarjeta_estadistica .card-body {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#ventas {
+    padding-top: 75px;
+    text-align: center;
+    color: #4a1f0e;
+}
+
+#ventas1 {
+    padding-top: 25px;
+}
+
+#ventas2 {
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+#ventas3 {
+    padding-left: 25px;
+}
+
+#ventas4 {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+#ventas5 {
+    padding-top: 25px;
+    align-content: center;
+}
+
+#card_empleo {
+    padding-left: 30%;
+}
+
+.boton_estadistica button {
+    color: #4a1f0e;
+    font-weight: bold;
+    background-color: #cea690 !important;
+    border: 2px solid rgba(112, 57, 59, 1) !important;
+    border-radius: 1px !important;
+}
+
+.boton_estadistica button:hover {
+    color: #4a1f0e;
+}
+
+
+.tarjeta_reportes {
+    margin-bottom: 35px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border-radius: 35px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagen_reporte {
+    width: 20%;
+    text-align: center;
+}
+
+.imagen_reporte img {
+    width: 50%;
+    height: 50%;
+}
+
+.datos_reportes {
+    width: 60%;
+}
+
+.datos_reportes p {
+    color: #4a1f0e;
+    margin-bottom: 0.5rem;
+    font-size: small;
+    white-space: initial;
+    overflow: hidden;
+}
+
+.boton_reporte {
+    width: 20%;
+    text-align: center;
+}
+
+.boton_reporte a:hover {
+    background-color: #ffffff !important;
+    color: #4c070a !important;
+}
+
+.estadistica_parametros {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: end;
+}
+
+.estadistica_parametros select {
+    width: 200px;
+}
+
+input[type="date" i] {
+    appearance: none;
+    font-size: 18px;
+    border: 1px solid #e8d9d9;
+    background: #e8d9d9;
+    padding: 4px;
+    display: inline-block;
+    visibility: visible;
+    color: #4a1f0e;
+}
+
+input[type="date"]:focus {
+    background-color: #ffffff;
+    border-color: #4c070a;
+    outline: 0;
+    box-shadow: 0 0 0 0.1rem rgba(76, 7, 10, .70);
+}
+
+.estadistica .tab-content>.active {
+    display: flex !important;
+}
+
+#mandarfechas {
+    width: 100%;
+}
+
+/*-------------------------------------------------OBSERVACIONES-------------------------------------------------*/
+
+.agregar_observacion {
+    display: flex;
+    justify-content: end;
+}
+
+.titulo_observacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    color: #4a1f0e;
+}
+
+.datos_observacion {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cambiar_estado {
+    width: 20%;
+}
+
+.cambiar_estado .form-check-input:checked {
+    background-color: #4f9b99 !important;
+}
+
+.imagen_empleado {
+    width: 10%;
+}
+
+.imagen_empleado img {
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+
+.datos_empleado {
+    width: 70%;
+    margin-left: 8px;
+}
+
+.datos_empleado p {
+    margin: 0px;
+}
+
+#foto_nombre_usuario {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    align-items: center;
+}
+
+#container_empleado {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background-color: #cea690;
+    border-radius: 20px;
+    height: 265px;
+    margin-bottom: 5%;
+}
+
+.container_observacion {
+    background-color: white;
+    resize: none;
+    margin-bottom: 20px;
+    font-size: 12pt;
+    color: #4a1f0e;
+}
+
+.btn_margin {
+    margin-bottom: 15px;
+}
+
+#btn_pendiente {
+    background-color: #4c070a;
+    font-size: smaller;
+    color: white;
+    border-radius: 10px;
+}
+
+#btn_realizado {
+    background-color: #057554;
+    font-size: smaller;
+    color: white;
+    border-radius: 10px;
+}
+
+#container_clasificar {
+    background-color: #cea690;
+    border-radius: 14px;
+    max-width: 100%;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+#btn_tipo {
+    background-color: #ce500a;
+    font-size: smaller;
+    color: white;
+    border-radius: 10px;
+}
+
+#txt_buscar {
+    height: 30px;
+    border-radius: 10px;
+}
+
+#titulo_clasificar {
+    color: #4c070a;
+    font-weight: bolder;
+}
+
+#container_clasificar h6 {
+    color: #4c070a;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+#container_clasificar h5 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#container_clasificar label {
+    color: #4c070a;
+
+}
+
+#observaciones_empleados {
+    border-radius: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 25px;
+    height: 850px;
+    margin-bottom: 35px;
+    overflow-y: auto;
+}
+
+#container_clasificar .form-check-input:checked {
+    background-color: #4f9b99 !important;
+}
+
+/*-------------------------------------------Reservación-------------------------------------------*/
+
+.texto_reservacion .form-label {
+    color: #4a1f0e;
+    font-weight: 500;
+    opacity: 100;
+}
+
+.texto_reservacion input {
+    color: #4a1f0e !important;
+    font-weight: 400;
+    opacity: 100%;
+}
+
+.texto_reservacion .form-select {
+    color: #4a1f0e !important;
+    font-weight: 400;
+    opacity: 100%;
+}
+
+.texto_reservacion2 {
+    font-size: medium;
+    color: #4a1f0e;
+    font-weight: bold;
+    margin-top: 50px;
+}
+
+#imgreservacion {
+    width: 60%;
+    height: 350px;
+
+}
+
+.contimg {
+    margin-bottom: 15px;
+    border: 2px solid #70393b;
+}
+
+.botonreserva button {
+    color: #4a1f0e;
+    font-weight: bold;
+    background-color: #cea690 !important;
+    border: 2px solid rgba(112, 57, 59, 1) !important;
+    border-radius: 1px !important;
+}
+
+.botonreserva button:hover {
+    color: #4a1f0e;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    text-decoration: underline 2px !important;
+    text-decoration-color: #70393b !important;
+}
+
+.tooltip-inner {
+    background-color: #4c070a !important;
+}
+
+.boton_rojo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.boton_rojo button {
+    background-color: #4c070a;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 23px;
+}
+
+.boton_rojo button:hover {
+    background-color: white;
+    padding: 4px 15px 4px 15px;
+    border: 1.5px solid rgba(76, 7, 10, 1);
+    color: #4c070a;
+    margin-top: 15px;
+    margin-bottom: 23px;
+    transition: all 0.4s ease;
+}
+
+#reservaciones_realizadas {
+    height: 830px;
+    overflow-y: auto;
+}
+
+.tarjeta_reservaciones {
+    margin-bottom: 35px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 150px;
+    border-radius: 35px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagen_reservacion {
+    width: 20%;
+    text-align: center;
+}
+
+.imagen_reservacion img {
+    width: 50%;
+    height: 50%;
+}
+
+.datos_reservacion {
+    width: 50%;
+}
+
+.boton_reservacion {
+    text-align: right;
+    width: 25%;
+}
+
+.datos_reservacion p {
+    color: #4a1f0e;
+    margin-bottom: 0.5rem;
+    font-size: small;
+}
+
+.buscador_reservacion {
+    width: 100%;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.buscador_reservacion input {
+    width: 40%;
+}
+
+.buscador_reservacion button {
+    border: none;
+}
+
+.hover-zoomin img {
+    width: 100%;
+    height: auto;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    -ms-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.hover-zoomin:hover img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.plano1 {
+    margin-left: 25%;
+    background-image: url('../recursos/imgs/reservaciones/plano1.png');
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.plano2 {
+    margin-left: 25%;
+    background-image: url('../recursos/imgs/reservaciones/plano2.png');
+    background-size: cover;
+    width: 500px;
+    height: 500px;
+    position: relative;
+}
+
+.plano3 {
+    margin-left: 25%;
+    background-image: url('../recursos/imgs/reservaciones/plano3.png');
+    background-size: cover;
+    width: 500px;
+    height: 700px;
+    position: relative;
+}
+
+.mesa img {
+    width: 65px;
+    height: 35px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.mesav img {
+    width: 35px;
+    height: 65px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.mesa img:hover {
+    filter: drop-shadow(0 0 5px #4c070a);
+}
+
+.mesav img:hover {
+    filter: drop-shadow(0 0 5px #4c070a);
+}
+
+.mesa {
+    position: absolute;
+    z-index: 3;
+}
+
+.mesav {
+    position: absolute;
+    z-index: 3;
+}
+
+.primera img {
+    top: 40px;
+    bottom: 25px;
+    left: 270px;
+}
+
+.segunda img {
+    top: 100px;
+    bottom: 25px;
+    left: 270px;
+}
+
+.tercera img {
+    top: 320px;
+    bottom: 25px;
+    left: 160px;
+}
+
+.cuarta img {
+    top: 320px;
+    bottom: 25px;
+    left: 250px;
+}
+
+.quinta img {
+    top: 390px;
+    bottom: 25px;
+    left: 250px;
+}
+
+.sexta img {
+    top: 390px;
+    bottom: 25px;
+    left: 160px;
+}
+
+.septima img {
+    top: 120px;
+    bottom: 25px;
+    left: 140px;
+}
+
+.octava img {
+    top: 180px;
+    bottom: 25px;
+    left: 140px;
+}
+
+.novena img {
+    top: 240px;
+    bottom: 25px;
+    left: 140px;
+}
+
+.decima img {
+    top: 300px;
+    bottom: 25px;
+    left: 140px;
+}
+
+.undecima img {
+    top: 360px;
+    bottom: 25px;
+    left: 140px;
+}
+
+.duodecima img {
+    top: 120px;
+    bottom: 25px;
+    left: 220px;
+}
+
+.decimatercera img {
+    top: 180px;
+    bottom: 25px;
+    left: 220px;
+}
+
+.decimacuarta img {
+    top: 240px;
+    bottom: 25px;
+    left: 220px;
+}
+
+.decimaquinta img {
+    top: 300px;
+    bottom: 25px;
+    left: 220px;
+}
+
+.decimasexta img {
+    top: 360px;
+    bottom: 25px;
+    left: 220px;
+}
+
+.decimaseptima img {
+    top: 120px;
+    bottom: 25px;
+    left: 300px;
+}
+
+.decimaoctava img {
+    top: 180px;
+    bottom: 25px;
+    left: 300px;
+}
+
+.decimanovena img {
+    top: 240px;
+    bottom: 25px;
+    left: 300px;
+}
+
+.vigesima img {
+    top: 300px;
+    bottom: 25px;
+    left: 300px;
+}
+
+.vigesimaprimera img {
+    top: 360px;
+    bottom: 25px;
+    left: 300px;
+}
+
+.vigesimasegunda img {
+    top: 300px;
+    bottom: 25px;
+    left: 220px;
+}
+
+.vigesimatercera img {
+    top: 360px;
+    bottom: 25px;
+    left: 220px;
+}
+
+.vigesimacuarta img {
+    top: 420px;
+    bottom: 25px;
+    left: 220px;
+}
+
+.vigesimaquinta img {
+    top: 300px;
+    bottom: 25px;
+    left: 320px;
+}
+
+.vigesimasexta img {
+    top: 360px;
+    bottom: 25px;
+    left: 320px;
+}
+
+.vigesimaseptima img {
+    top: 420px;
+    bottom: 25px;
+    left: 320px;
+}
+
+.vigesimaoctava img {
+    top: 80px;
+    bottom: 25px;
+    left: 60px;
+}
+
+.vigesimanovena img {
+    top: 300px;
+    bottom: 25px;
+    left: 60px;
+}
+
+.trigesima img {
+    top: 400px;
+    bottom: 25px;
+    left: 60px;
+}
+
+/*-------------------------------------------Login-------------------------------------------*/
+
+.credenciales_login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.credenciales_login img {
+    width: 30px !important;
+    height: 30px !important;
+    cursor: pointer;
+}
+
+#tarjeta_login .card {
+    margin-top: 7%;
+    margin-bottom: 7% !important;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 15px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#tarjeta_login img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#tarjeta_login .card-body {
+    margin-bottom: 15%;
+}
+
+#titulo_login {
+    font-size: 20pt;
+    color: #4a1f0e;
+    font-weight: bolder;
+}
+
+#titulo_login p {
+    text-align: center !important;
+}
+
+#linea_login hr {
+    width: 100%;
+    height: 2px;
+    background-color: #4a1f0e;
+    padding-top: 2px;
+    opacity: 100;
+}
+
+#contenido_login {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#btn_registrar {
+    text-align: center;
+}
+
+#btn_registrar a {
+    color: #4a1f0e;
+}
+
+#contraseña_registrar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#contraseña_registrar a {
+    color: #4a1f0e;
+}
+
+#imagen_fondo {
+    background-image: url("../recursos/imgs/fondo_pagina.png");
+}
+
+
+/*-------------------------------------------CREAR USUARIO-------------------------------------------*/
+
+.form-label {
+    color: #4a1f0e;
+}
+
+#registrar_usuario_form span {
+    color: #4c070a;
+    font-size: smaller;
+}
+
+#textbox_c {
+    margin-top: 25px;
+    font-size: 15pt;
+    color: #4a1f0e;
+}
+
+.boton_registrarse {
+    background-color: #4c070a !important;
+    color: white;
+    width: 30%;
+    margin-top: 15px;
+    margin-bottom: 23px;
+}
+
+#contenido_registrar {
+    padding-left: 0px;
+    padding-right: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#textbox {
+    margin-top: 5%;
+    margin-bottom: 7%;
+    padding-left: 3%;
+    padding-right: 3%;
+    border-radius: 15px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#texto_crear {
+    font-size: 20pt;
+    color: #4a1f0e;
+    font-weight: bolder;
+    margin-top: 50px;
+}
+
+#linea_crear hr {
+    width: 80%;
+    height: 2px;
+    background-color: #4a1f0e;
+    padding-top: 2px;
+    opacity: 100;
+}
+
+#btn-margin {
+    margin-top: 15px;
+    text-align: center;
+    border-color: #4c070a;
+}
+
+#btn-margin .btn-primary {
+    text-align: center;
+    border-color: #4c070a;
+}
+
+#contra_registro {
+    display: flex;
+    flex-direction: row;
+}
+
+#contra_registro a {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#margin_img {
+    width: 25%;
+    height: 25%;
+}
+
+#tarjeta_recuperar .card {
+    margin-top: 7%;
+    margin-bottom: 7% !important;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 15px !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+}
+
+#tarjeta_recuperar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+#boton_codigo {
+    background-color: #4c070a;
+    margin-top: 15px;
+}
+
+#icon_text {
+    text-align: center;
+}
+
+#icon_text p {
+    color: #4a1f0e;
+}
+
+#icon_text img {
+    width: 45px;
+    height: 45px;
+    margin-bottom: 1%;
+}
+
+.generadores_contra {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.generadores_contra a {
+    color: #70393b;
+}
+
+.generadores_contra a:hover {
+    color: #4c070a;
+}
+
+/*------------------------------------------------------------PERFIL-------------------------------------------------------------*/
+
+.activar_edicion {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.activar_edicion img {
+    height: 25px !important;
+    width: 25px !important;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.activar_edicion input {
+    height: 31px;
+}
+
+.activar_edicion span {
+    color: #4c070a;
+    font-size: small;
+}
+
+.saludo_imagen_perfil {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #4a1f0e;
+}
+
+.imagen_perfil img {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    margin-bottom: 5%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagen_gif_perfil {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.imagen_gif_perfil img {
+    width: 250px;
+    height: 250px;
+}
+
+.imagen_gif_perfil button {
+    margin-top: 3%;
+    height: 45px;
+    margin-bottom: 5%
+}
+
+/*---------------------------------------------------------ERROR 403----------------------------------------------------------*/
+.error_403 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error_403 img {
+    width: 350px;
+    height: 400px;
+}
+
+.error_403 a {
+    width: 200px;
+}
+
+.error_404 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.error_404 img {
+    width: 450px;
+    height: 350px;
+}
+
+.error_404 a {
+    width: 200px;
+}
+
+/*---------------------------------------------------------GENERADOR QR----------------------------------------------------------*/
+.contenedor_qr{
+    color: #ffffff; display: 
+    flex; flex-direction: column; 
+    justify-content: center; 
+    align-items: center; 
+    flex-wrap: nowrap;
+}
+
+#fondo_contenedor_qr {
+    width: 100%;
+    height: 100%;
+    background-image: url("../recursos/imgs/qr/fondo_qr.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.contenedor_qr .modal-header{
+    width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: end !important;
+    align-items: end !important;
+}
+
+.contenedor_qr h4{
+    text-align: center;
+}
+
+.contenedor_qr h1 {
+    font-size: 35px;
+}
+
+.contenedor_imagen_qr {
+    background-repeat: no-repeat; 
+    width: 600px; 
+    height: 100%;
+    background-size: cover; 
+    display: flex; 
+    flex-direction: column; 
+    justify-content: center; 
+    align-items: center;
+}
+
+#imagen_qr {
+    width: 500px;
+    height: 500px;
+    background-image: url("../recursos/imgs/qr/contenedor_qr.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#imagen_contenedor_qr {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+    border-radius: 15px; 
+    margin-right: 5px;
+    margin-top: 25px;
+}
+
+/*---------------------------------------------------------CALENDARIO----------------------------------------------------------*/
+#calendar {
+    background-color: #6f383a;
+    padding: 15px;
+}
+
+.fc .fc-daygrid-day-frame {
+    background-color: #ffffff;
+}
+
+.fc .fc-toolbar-title {
+    color: #ffffff;
+}
+
+.fc-timegrid-slot-label-cushion {
+    color: #ffffff;
+}
+
+.fc .fc-timegrid-axis-cushion {
+    color: #ffffff;
+}
+
+.fc .fc-col-header-cell-cushion {
+    color: #ffffff !important;
+}
+
+.fc-theme-standard td, .fc-theme-standard th {
+    background-color: #404040;
+}
+
+#calendar a{
+    color: #404040;
+}
+
+.fc .fc-daygrid-day-frame {
+    cursor: pointer;
+}
+
+#agregar_evento .modal-content {
+    background-color: #cea690;
+    border-radius: 15px;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++RESPONSIVE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+
+/*para celulares*/
+@media screen and (max-width: 374px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Apartado superior de titulo*/
+    #apartado_superior1 {
+        max-width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 4%;
+        margin-bottom: 1%;
+        transition: all .7s ease-in-out;
+    }
+
+    /*Le damos un tamaño para el boton de menú movil*/
+    #apartado_movil {
+        max-width: 25%;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Le damos un tamaño al Offset*/
+    #offcanvasWithBothOptions {
+        max-width: 80%;
+    }
+
+    /*Le damos un tamño del 100% al apartado superior para que cuando nos desplazemos siempre se mantenga arriba*/
+    #menu2.sticky {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 0%;
+        animation-duration: 1.5s;
+        animation-name: moviendose;
+        animation-iteration-count: 1, 0;
+    }
+
+    /*Animación del cambio sticky al apartado superior*/
+    @keyframes moviendose {
+        0% {
+            padding: 4%;
+        }
+
+        100% {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 0%;
+        }
+    }
+
+    /*-------------------------------------MAIN-------------------------------------*/
+
+    /*Tarjeta de observación le quitamos el padding*/
+    #tarjeta_observaciones {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    #tarjeta_estadisticas {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    /*---------------------------------Reservación---------------------------------*/
+    #txt {
+        margin-right: 0%;
+    }
+
+    #txt1 {
+        margin-left: 0%;
+    }
+
+    .mesasreservar {
+        margin-left: 0%;
+    }
+
+    #imgreservacion {
+        width: 100%;
+        height: 350px;
+    }
+
+    /*-------------------------------------FOOTER-------------------------------------*/
+    #informacion {
+        padding-left: 0%;
+        font-size: 12px;
+    }
+
+    /*-------------------------------------CREAR USUARIO-------------------------------*/
+    #texto_crear {
+        margin-left: 0%;
+    }
+
+    #textbox {
+        margin-left: 0%;
+    }
+
+    .boton_registrarse {
+        background-color: #4c070a !important;
+        color: white;
+        width: 50%;
+        margin-top: 15px;
+        margin-bottom: 23px;
+    }
+
+    /*-------------------------------------SCRUD-----------------------------------------*/
+    .buscador_agregar_empleado {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .buscador_y_agregar_empleado {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .buscador {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .buscador_ingrediente {
+        flex-wrap: wrap;
+    }
+
+    .buscador_ingrediente input {
+        width: 150px;
+    }
+
+    .tarjeta_inventario .row img {
+        margin-top: 10px;
+        width: 93%;
+    }
+
+    .acciones_inventario {
+        margin-top: 0px;
+    }
+
+    .card.tarjeta_inventario {
+        width: 70% !important;
+        margin-left: 15%;
+        margin-bottom: 50px;
+    }
+
+    .tarjeta_inventario .row img {
+        margin-top: 10px;
+        width: 96%;
+    }
+
+    .apartado_registrar {
+        height: 750px;
+        width: 96% !important;
+        margin-bottom: 5%;
+    }
+
+    .buscador_ingrediente {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #botones_acciones_inventario {
+        padding-top: 30px;
+        width: 100%;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .apartado_texto_registro {
+        width: 100%;
+    }
+
+    /*-------------------------------------Perfil-----------------------------------------*/
+    .imagen_perfil {
+        text-align: center !important;
+    }
+
+    /*----------------------------------Reservaciones-------------------------*/
+    .plano1 {
+        margin-left: 0%;
+        width: 200px;
+        height: 200px;
+        background-size: 200px 200px;
+        position: relative;
+    }
+
+    .plano2 {
+        margin-left: 0%;
+        width: 200px;
+        height: 200px;
+        background-size: 200px 200px;
+    }
+
+    .plano3 {
+        margin-left: 0%;
+        width: 200px;
+        height: 260px;
+        background-size: 200px 260px;
+    }
+
+    .mesa img {
+        width: 25px;
+        height: 14px;
+    }
+
+    .mesav img {
+        width: 14px;
+        height: 25px;
+    }
+
+    .primera img {
+        top: 20px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .segunda img {
+        top: 40px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .tercera img {
+        top: 130px;
+        bottom: 25px;
+        left: 70px;
+    }
+
+    .cuarta img {
+        top: 150px;
+        bottom: 25px;
+        left: 70px;
+    }
+
+    .quinta img {
+        top: 130px;
+        bottom: 25px;
+        left: 100px;
+    }
+
+    .sexta img {
+        top: 150px;
+        bottom: 25px;
+        left: 100px;
+    }
+
+    .septima img {
+        top: 50px;
+        bottom: 25px;
+        left: 60px;
+    }
+
+    .octava img {
+        top: 75px;
+        bottom: 25px;
+        left: 60px;
+    }
+
+    .novena img {
+        top: 100px;
+        bottom: 25px;
+        left: 60px;
+    }
+
+    .decima img {
+        top: 125px;
+        bottom: 25px;
+        left: 60px;
+    }
+
+    .undecima img {
+        top: 150px;
+        bottom: 25px;
+        left: 60px;
+    }
+
+    .duodecima img {
+        top: 50px;
+        bottom: 25px;
+        left: 90px;
+    }
+
+    .decimatercera img {
+        top: 75px;
+        bottom: 25px;
+        left: 90px;
+    }
+
+    .decimacuarta img {
+        top: 100px;
+        bottom: 25px;
+        left: 90px;
+    }
+
+    .decimaquinta img {
+        top: 125px;
+        bottom: 25px;
+        left: 90px;
+    }
+
+    .decimasexta img {
+        top: 150px;
+        bottom: 25px;
+        left: 90px;
+    }
+
+    .decimaseptima img {
+        top: 50px;
+        bottom: 25px;
+        left: 120px;
+    }
+
+    .decimaoctava img {
+        top: 75px;
+        bottom: 25px;
+        left: 120px;
+    }
+
+    .decimanovena img {
+        top: 100px;
+        bottom: 25px;
+        left: 120px;
+    }
+
+    .vigesima img {
+        top: 125px;
+        bottom: 25px;
+        left: 120px;
+    }
+
+    .vigesimaprimera img {
+        top: 150px;
+        bottom: 25px;
+        left: 120px;
+    }
+
+    .vigesimasegunda img {
+        top: 110px;
+        bottom: 25px;
+        left: 85px;
+    }
+
+    .vigesimatercera img {
+        top: 135px;
+        bottom: 25px;
+        left: 85px;
+    }
+
+    .vigesimacuarta img {
+        top: 160px;
+        bottom: 25px;
+        left: 85px;
+    }
+
+    .vigesimaquinta img {
+        top: 110px;
+        bottom: 25px;
+        left: 125px;
+    }
+
+    .vigesimasexta img {
+        top: 135px;
+        bottom: 25px;
+        left: 125px;
+    }
+
+    .vigesimaseptima img {
+        top: 160px;
+        bottom: 25px;
+        left: 125px;
+    }
+
+    .vigesimaoctava img {
+        top: 40px;
+        bottom: 25px;
+        left: 25px;
+    }
+
+    .vigesimanovena img {
+        top: 110px;
+        bottom: 25px;
+        left: 25px;
+    }
+
+    .trigesima img {
+        top: 150px;
+        bottom: 25px;
+        left: 25px;
+    }
+
+    /*------------------------------REPORTES------------------------------*/
+    .tarjeta_reportes {
+        margin-bottom: 35px;
+        padding-top: 8px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 350px;
+        max-height: 375px;
+        border-radius: 35px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+    .imagen_reporte {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .imagen_reporte img {
+        width: 85px;
+        height: 95px;
+    }
+
+    .datos_reportes {
+        width: 100%;
+    }
+
+    .datos_reportes p {
+        text-align: center;
+        font-size: smaller;
+    }
+
+    .boton_reporte {
+        width: 100%;
+    }
+
+    #tarjeta_estadistica .card {
+        text-align: center;
+    }
+
+    /*------------------------------Reservaciones---------------------*/
+    .tarjeta_reservaciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 290px;
+    }
+
+    .imagen_reservacion {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .imagen_reservacion img {
+        width: 25%;
+        height: 100%;
+    }
+
+    .datos_reservacion {
+        width: 90%;
+    }
+
+    .boton_reservacion {
+        text-align: center;
+        margin-top: 5px;
+        width: 100%;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:575px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Apartado superior de titulo*/
+    #apartado_superior1 {
+        max-width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 1%;
+        transition: all .7s ease-in-out;
+    }
+
+    /*Le damos un tamaño para el boton de menú movil*/
+    #apartado_movil {
+        max-width: 25%;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*Le damos un tamaño al Offset*/
+    #offcanvasWithBothOptions {
+        max-width: 80%;
+    }
+
+    /*Le damos un tamaño del 100% al apartado superior para que cuando nos desplazemos siempre se mantenga arriba*/
+    #menu2.sticky {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 0%;
+        animation-duration: 1.5s;
+        animation-name: moviendose;
+        animation-iteration-count: 1, 0;
+    }
+
+    /*Animación del cambio sticky al apartado superior*/
+    @keyframes moviendose {
+        0% {
+            padding: 4%;
+        }
+
+        100% {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 0%;
+        }
+    }
+
+    /*-------------------------------------MAIN-------------------------------------*/
+
+    /*Tarjeta de observación le quitamos el padding*/
+    #tarjeta_observaciones {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    #tarjeta_estadisticas {
+        padding-left: 6%;
+        padding-right: 6%;
+    }
+
+    .buscador_ingrediente input {
+        width: 150px;
+    }
+
+    /*---------------------------------Reservación---------------------------------*/
+    #txt {
+        margin-right: 0%;
+    }
+
+    #txt1 {
+        margin-left: 0%;
+    }
+
+    .mesasreservar {
+        margin-left: 0%;
+    }
+
+    #imgreservacion {
+        width: 100%;
+        height: 350px;
+    }
+
+    /*-------------------------------------FOOTER-------------------------------------*/
+    #informacion {
+        padding-left: 0%;
+    }
+
+    /*-------------------------------------CREAR USUARIO-------------------------------*/
+    #texto_crear {
+        margin-left: 0%;
+    }
+
+    #textbox {
+        margin-left: 0%;
+    }
+
+    .boton_registrarse {
+        background-color: #4c070a !important;
+        color: white;
+        width: 50%;
+        margin-top: 15px;
+        margin-bottom: 23px;
+
+    }
+
+    /*-------------------------------------SCRUD-----------------------------------------*/
+    .buscador_agregar_empleado {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .buscador_y_agregar_empleado {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .buscador {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .buscador_ingrediente input {
+        width: 250px;
+    }
+
+    .tarjeta_inventario .row img {
+        margin-top: 10px;
+        width: 93%;
+    }
+
+    .acciones_inventario {
+        margin-top: 0px;
+    }
+
+    .card.tarjeta_inventario {
+        width: 70% !important;
+        margin-left: 15%;
+        margin-bottom: 50px;
+    }
+
+    .tarjeta_inventario .row img {
+        margin-top: 10px;
+        width: 96%;
+    }
+
+    .apartado_registrar {
+        height: 750px;
+        width: 96% !important;
+        margin-bottom: 5%;
+    }
+
+    .buscador_ingrediente {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #botones_acciones_inventario {
+        padding-top: 30px;
+        width: 100%;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .apartado_texto_registro {
+        width: 100%;
+    }
+
+    /*-------------------------------------Perfil-----------------------------------------*/
+    .imagen_perfil {
+        text-align: center !important;
+    }
+
+    /*----------------------------------Reservaciones-------------------------*/
+    .plano1 {
+        margin-left: 0%;
+        width: 260px;
+        height: 260px;
+        background-size: 260px 260px;
+        position: relative;
+    }
+
+    .plano2 {
+        margin-left: 0%;
+        width: 260px;
+        height: 260px;
+        background-size: 260px 260px;
+    }
+
+    .plano3 {
+        margin-left: 0%;
+        width: 260px;
+        height: 300px;
+        background-size: 260px 300px;
+    }
+
+    .mesa img {
+        width: 35px;
+        height: 18px;
+    }
+
+    .mesav img {
+        width: 18px;
+        height: 35px;
+    }
+
+    .primera img {
+        top: 30px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .segunda img {
+        top: 60px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .tercera img {
+        top: 170px;
+        bottom: 25px;
+        left: 90px;
+    }
+
+    .cuarta img {
+        top: 200px;
+        bottom: 25px;
+        left: 90px;
+    }
+
+    .quinta img {
+        top: 170px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .sexta img {
+        top: 200px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .septima img {
+        top: 60px;
+        bottom: 25px;
+        left: 70px;
+    }
+
+    .octava img {
+        top: 90px;
+        bottom: 25px;
+        left: 70px;
+    }
+
+    .novena img {
+        top: 120px;
+        bottom: 25px;
+        left: 70px;
+    }
+
+    .decima img {
+        top: 150px;
+        bottom: 25px;
+        left: 70px;
+    }
+
+    .undecima img {
+        top: 180px;
+        bottom: 25px;
+        left: 70px;
+    }
+
+    .duodecima img {
+        top: 60px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .decimatercera img {
+        top: 90px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .decimacuarta img {
+        top: 120px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .decimaquinta img {
+        top: 150px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .decimasexta img {
+        top: 180px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .decimaseptima img {
+        top: 60px;
+        bottom: 25px;
+        left: 150px;
+    }
+
+    .decimaoctava img {
+        top: 90px;
+        bottom: 25px;
+        left: 150px;
+    }
+
+    .decimanovena img {
+        top: 120px;
+        bottom: 25px;
+        left: 150px;
+    }
+
+    .vigesima img {
+        top: 150px;
+        bottom: 25px;
+        left: 150px;
+    }
+
+    .vigesimaprimera img {
+        top: 180px;
+        bottom: 25px;
+        left: 150px;
+    }
+
+    .vigesimasegunda img {
+        top: 125px;
+        bottom: 25px;
+        left: 115px;
+    }
+
+    .vigesimatercera img {
+        top: 160px;
+        bottom: 25px;
+        left: 115px;
+    }
+
+    .vigesimacuarta img {
+        top: 195px;
+        bottom: 25px;
+        left: 115px;
+    }
+
+    .vigesimaquinta img {
+        top: 125px;
+        bottom: 25px;
+        left: 155px;
+    }
+
+    .vigesimasexta img {
+        top: 160px;
+        bottom: 25px;
+        left: 155px;
+    }
+
+    .vigesimaseptima img {
+        top: 195px;
+        bottom: 25px;
+        left: 155px;
+    }
+
+    .vigesimaoctava img {
+        top: 42px;
+        bottom: 25px;
+        left: 30px;
+    }
+
+    .vigesimanovena img {
+        top: 120px;
+        bottom: 25px;
+        left: 30px;
+    }
+
+    .trigesima img {
+        top: 170px;
+        bottom: 25px;
+        left: 30px;
+    }
+
+    /*------------------------------REPORTES------------------------------*/
+    .tarjeta_reportes {
+        margin-bottom: 35px;
+        padding-top: 8px;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        display: flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 320px;
+        max-height: 375px;
+        border-radius: 35px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+    .imagen_reporte {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .imagen_reporte img {
+        width: 85px;
+        height: 95px;
+    }
+
+    .datos_reportes {
+        width: 100%;
+    }
+
+    .datos_reportes p {
+        text-align: center;
+    }
+
+    .boton_reporte {
+        width: 100%;
+    }
+
+    /*------------------------------Reservaciones---------------------*/
+    .tarjeta_reservaciones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 290px;
+    }
+
+    .imagen_reservacion {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .imagen_reservacion img {
+        width: 25%;
+        height: 100%;
+    }
+
+    .datos_reservacion {
+        width: 90%;
+    }
+
+    .boton_reservacion {
+        text-align: center;
+        margin-top: 10px;
+        width: 100%;
+    }
+
+    /*---------------------------Observaciones------------------------*/
+    #container_empleado {
+        height: 350px;
+    }
+
+    .datos_observacion {
+        width: 65%;
+    }
+
+    .cambiar_estado {
+        width: 35%;
+    }
+
+    .imagen_empleado {
+        width: 50px;
+    }
+
+    .datos_empleado {
+        width: 70%;
+    }
+
+    .datos_empleado p {
+        font-size: medium;
+    }
+
+    /*---------------------------------------------------------ERROR 403----------------------------------------------------------*/
+    .error_403 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .error_403 img {
+        width: 200px;
+        height: 230px;
+    }
+
+    .error_403 a {
+        width: 200px;
+        font-size: medium;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:644px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Apartado superior de titulo*/
+    #apartado_superior1 {
+        max-width: 40%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 1%;
+        transition: all .7s ease-in-out;
+    }
+
+    /*Apartado de componetes(Fecha, Usuario, Idioma y Modo Color) le damos dirección row y otras propiedades*/
+    #apartado_superior2 {
+        max-width: 50%;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        color: #4a1f0e;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        transition: all .7s ease-in-out;
+    }
+
+    /*Le damos un tamaño para el boton de menú movil*/
+    #apartado_movil {
+        max-width: 10%;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #opciones_personalizadas {
+        display: none;
+    }
+
+    /*Le damos un tamño del 100% al apartado superior para que cuando nos desplazemos siempre se mantenga arriba*/
+    #menu2.sticky {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 0%;
+        animation-duration: 1.5s;
+        animation-name: moviendose;
+        animation-iteration-count: 1, 0;
+    }
+
+    /*Animación del cambio sticky al apartado superior*/
+    @keyframes moviendose {
+        0% {
+            padding: 4%;
+        }
+
+        100% {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 0%;
+        }
+    }
+
+    /*-------------------------------------MAIN-------------------------------------*/
+    /*Le damos un tamaño a los textos de las tarjetas de ventas*/
+    .datos_ventas h3 {
+        font-size: medium;
+    }
+
+    /*Le damos un tamaño a los textos de las tarjetas de ventas*/
+    .datos_ventas p {
+        font-size: 15px;
+    }
+
+    /*Tarjeta de observación le quitamos el padding*/
+    #tarjeta_observaciones {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #tarjeta_estadisticas {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    /*---------------------------------Reservación---------------------------------*/
+    #txt {
+        margin-right: 0%;
+    }
+
+    #txt1 {
+        margin-left: 0%;
+    }
+
+    .mesasreservar {
+        margin-left: 0%;
+    }
+
+    #imgreservacion {
+        width: 100%;
+        height: 350px;
+    }
+
+    /*-------------------------------------SCRUD-----------------------------------------*/
+    .buscador_agregar_empleado {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .buscador_y_agregar_empleado {
+        margin-top: 2%;
+        margin-bottom: 2%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .buscador {
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    .card.tarjeta_inventario {
+        width: 70% !important;
+        margin-left: 15%;
+        margin-bottom: 50px;
+    }
+
+    .tarjeta_inventario .row img {
+        margin-top: 10px;
+        width: 96%;
+    }
+
+    .apartado_registrar {
+        height: 750px;
+        width: 96% !important;
+        margin-bottom: 5%;
+    }
+
+    .buscador_ingrediente {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #botones_acciones_inventario {
+        padding-top: 30px;
+        width: 100%;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .apartado_texto_registro {
+        width: 100%;
+    }
+
+    /*-------------------------------------FOOTER-------------------------------------*/
+    #informacion {
+        padding-left: 0%;
+    }
+
+    /*-------------------------------------Perfil-----------------------------------------*/
+    .imagen_perfil {
+        text-align: center !important;
+    }
+
+    /*----------------------------------Reservaciones-------------------------*/
+    .plano1 {
+        margin-left: 2%;
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+
+    .plano2 {
+        margin-left: 2%;
+        width: 400px;
+        height: 400px;
+    }
+
+    .plano3 {
+        margin-left: 2%;
+        width: 400px;
+        height: 580px;
+    }
+
+    .mesa img {
+        width: 50px;
+        height: 28px;
+    }
+
+    .mesav img {
+        width: 28px;
+        height: 50px;
+    }
+
+    .primera img {
+        top: 30px;
+        bottom: 25px;
+        left: 220px;
+    }
+
+    .segunda img {
+        top: 90px;
+        bottom: 25px;
+        left: 220px;
+    }
+
+    .tercera img {
+        top: 260px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .cuarta img {
+        top: 260px;
+        bottom: 25px;
+        left: 210px;
+    }
+
+    .quinta img {
+        top: 310px;
+        bottom: 25px;
+        left: 210px;
+    }
+
+    .sexta img {
+        top: 310px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .septima img {
+        top: 90px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .octava img {
+        top: 140px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .novena img {
+        top: 190px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .decima img {
+        top: 240px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .undecima img {
+        top: 290px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .duodecima img {
+        top: 90px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimatercera img {
+        top: 140px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimacuarta img {
+        top: 190px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimaquinta img {
+        top: 240px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimasexta img {
+        top: 290px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimaseptima img {
+        top: 90px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+
+    .decimaoctava img {
+        top: 140px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .decimanovena img {
+        top: 190px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .vigesima img {
+        top: 240px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .vigesimaprimera img {
+        top: 290px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .vigesimasegunda img {
+        top: 250px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .vigesimatercera img {
+        top: 300px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .vigesimacuarta img {
+        top: 350px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .vigesimaquinta img {
+        top: 250px;
+        bottom: 25px;
+        left: 260px;
+    }
+
+    .vigesimasexta img {
+        top: 300px;
+        bottom: 25px;
+        left: 260px;
+    }
+
+    .vigesimaseptima img {
+        top: 350px;
+        bottom: 25px;
+        left: 260px;
+    }
+
+    .vigesimaoctava img {
+        top: 80px;
+        bottom: 25px;
+        left: 50px;
+    }
+
+    .vigesimanovena img {
+        top: 245px;
+        bottom: 25px;
+        left: 50px;
+    }
+
+    .trigesima img {
+        top: 335px;
+        bottom: 25px;
+        left: 50px;
+    }
+}
+
+@media screen and (min-width:645px) and (max-width:768px) {
+    /*----------------------------Header----------------------------*/
+    /*Apartado superior de titulo*/
+    #apartado_superior1 {
+        max-width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 1%;
+        transition: all .7s ease-in-out;
+    }
+
+    /*Apartado de componetes(Fecha, Usuario, Idioma y Modo Color) le damos dirección row y otras propiedades*/
+    #apartado_superior2 {
+        max-width: 60%;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        color: #4a1f0e;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        transition: all .7s ease-in-out;
+    }
+
+    /*Le damos un tamaño para el boton de menú movil*/
+    #apartado_movil {
+        max-width: 10%;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /*Le damos un tamño del 100% al apartado superior para que cuando nos desplazemos siempre se mantenga arriba*/
+    #menu2.sticky {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 0%;
+        animation-duration: 1.5s;
+        animation-name: moviendose;
+        animation-iteration-count: 1, 0;
+    }
+
+    /*Animación del cambio sticky al apartado superior*/
+    @keyframes moviendose {
+        0% {
+            padding: 4%;
+        }
+
+        100% {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 0%;
+        }
+    }
+
+    /*-------------------------------------MAIN-------------------------------------*/
+    /*Le damos un tamaño a los textos de las tarjetas de ventas*/
+    .datos_ventas h3 {
+        font-size: medium;
+    }
+
+    /*Tarjeta de observación le quitamos el padding*/
+    #tarjeta_observaciones {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    #tarjeta_estadisticas {
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    /*---------------------------------Reservación---------------------------------*/
+    #txt {
+        margin-right: 0%;
+    }
+
+    #txt1 {
+        margin-left: 0%;
+    }
+
+    .mesasreservar {
+        margin-left: 0%;
+    }
+
+    #imgreservacion {
+        width: 100%;
+        height: 350px;
+    }
+
+    /*------------------------------------SCRUD ------------------------------------*/
+    .buscador_agregar_empleado {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .buscador_y_agregar_empleado {
+        margin-top: 15px;
+    }
+
+    .card.tarjeta_inventario {
+        width: 70% !important;
+        margin-left: 15%;
+        margin-bottom: 50px;
+    }
+
+    .tarjeta_inventario .row img {
+        margin-top: 10px;
+        width: 96%;
+    }
+
+    .apartado_registrar {
+        height: 750px;
+        width: 96% !important;
+        margin-bottom: 5%;
+    }
+
+    .buscador_ingrediente {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #botones_acciones_inventario {
+        padding-top: 30px;
+        width: 100%;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .apartado_texto_registro {
+        width: 100%;
+    }
+
+    /*----------------------------------Reservaciones-------------------------*/
+    .plano1 {
+        margin-left: 2%;
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+
+    .plano2 {
+        margin-left: 2%;
+        width: 400px;
+        height: 400px;
+    }
+
+    .plano3 {
+        margin-left: 2%;
+        width: 400px;
+        height: 580px;
+    }
+
+    .mesa img {
+        width: 50px;
+        height: 28px;
+    }
+
+    .mesav img {
+        width: 28px;
+        height: 50px;
+    }
+
+    .primera img {
+        top: 30px;
+        bottom: 25px;
+        left: 220px;
+    }
+
+    .segunda img {
+        top: 90px;
+        bottom: 25px;
+        left: 220px;
+    }
+
+    .tercera img {
+        top: 260px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .cuarta img {
+        top: 260px;
+        bottom: 25px;
+        left: 210px;
+    }
+
+    .quinta img {
+        top: 310px;
+        bottom: 25px;
+        left: 210px;
+    }
+
+    .sexta img {
+        top: 310px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .septima img {
+        top: 90px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .octava img {
+        top: 140px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .novena img {
+        top: 190px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .decima img {
+        top: 240px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .undecima img {
+        top: 290px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .duodecima img {
+        top: 90px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimatercera img {
+        top: 140px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimacuarta img {
+        top: 190px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimaquinta img {
+        top: 240px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimasexta img {
+        top: 290px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimaseptima img {
+        top: 90px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .decimaoctava img {
+        top: 140px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .decimanovena img {
+        top: 190px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .vigesima img {
+        top: 240px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .vigesimaprimera img {
+        top: 290px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .vigesimasegunda img {
+        top: 250px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .vigesimatercera img {
+        top: 300px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .vigesimacuarta img {
+        top: 350px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .vigesimaquinta img {
+        top: 250px;
+        bottom: 25px;
+        left: 260px;
+    }
+
+    .vigesimasexta img {
+        top: 300px;
+        bottom: 25px;
+        left: 260px;
+    }
+
+    .vigesimaseptima img {
+        top: 350px;
+        bottom: 25px;
+        left: 260px;
+    }
+
+    .vigesimaoctava img {
+        top: 80px;
+        bottom: 25px;
+        left: 50px;
+    }
+
+    .vigesimanovena img {
+        top: 245px;
+        bottom: 25px;
+        left: 50px;
+    }
+
+    .trigesima img {
+        top: 335px;
+        bottom: 25px;
+        left: 50px;
+    }
+
+    /*-------------------------------------FOOTER-------------------------------------*/
+    #informacion {
+        padding-left: 0%;
+    }
+
+    /*-------------------------------------Perfil-----------------------------------------*/
+    .imagen_perfil {
+        text-align: center !important;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Apartado superior de titulo*/
+    #apartado_superior1 {
+        max-width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-top: 3%;
+        margin-bottom: 1%;
+        transition: all .7s ease-in-out;
+    }
+
+    /*Apartado de componetes(Fecha, Usuario, Idioma y Modo Color) le damos dirección row y otras propiedades*/
+    #apartado_superior2 {
+        max-width: 60%;
+        display: flex !important;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        color: #4a1f0e;
+        margin-top: 1%;
+        margin-bottom: 1%;
+        transition: all .7s ease-in-out;
+    }
+
+    /*Le damos un tamaño para el boton de menú movil*/
+    #apartado_movil {
+        max-width: 10%;
+        display: flex !important;
+        flex-direction: row !important;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    /*Le damos un tamaño del 100% al apartado superior para que cuando nos desplazemos siempre se mantenga arriba*/
+    #menu2.sticky {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 0%;
+        animation-duration: 1.5s;
+        animation-name: moviendose;
+        animation-iteration-count: 1, 0;
+    }
+
+    /*Animación del cambio sticky al apartado superior*/
+    @keyframes moviendose {
+        0% {
+            padding: 4%;
+        }
+
+        100% {
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+            padding: 0%;
+        }
+    }
+
+    /*---------------------------------Reservación---------------------------------*/
+    #txt {
+        margin-right: 0%;
+    }
+
+    #txt1 {
+        margin-left: 0%;
+    }
+
+    .mesasreservar {
+        margin-left: 0%;
+    }
+
+    #imgreservacion {
+        width: 100%;
+        height: 350px;
+    }
+
+    /*-------------------------------------------Calendario-------------------------------------------*/
+    .calendar-events {
+        display: none;
+    }
+
+    /*-------------------------------------SCRUD-----------------------------------------*/
+    .buscador_agregar_empleado {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .buscador_y_agregar_empleado {
+        margin-top: 15px;
+    }
+
+    .apartado_registrar {
+        height: 820px;
+    }
+
+    .buscador_ingrediente {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #botones_acciones_inventario {
+        padding-top: 30px;
+        width: 100%;
+        display: flex !important;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .apartado_texto_registro {
+        width: 100%;
+    }
+
+    /*----------------------------------Reservaciones-------------------------*/
+    .plano1 {
+        margin-left: 10%;
+        width: 400px;
+        height: 400px;
+        position: relative;
+    }
+
+    .plano2 {
+        margin-left: 10%;
+        width: 400px;
+        height: 400px;
+    }
+
+    .plano3 {
+        margin-left: 10%;
+        width: 500px;
+        height: 700px;
+    }
+
+    .mesa img {
+        width: 55px;
+        height: 30px;
+    }
+
+    .mesav img {
+        width: 30px;
+        height: 55px;
+    }
+
+    .primera img {
+        top: 30px;
+        bottom: 25px;
+        left: 220px;
+    }
+
+    .segunda img {
+        top: 90px;
+        bottom: 25px;
+        left: 220px;
+    }
+
+    .tercera img {
+        top: 260px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .cuarta img {
+        top: 260px;
+        bottom: 25px;
+        left: 210px;
+    }
+
+    .quinta img {
+        top: 310px;
+        bottom: 25px;
+        left: 210px;
+    }
+
+    .sexta img {
+        top: 310px;
+        bottom: 25px;
+        left: 140px;
+    }
+
+    .septima img {
+        top: 90px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .octava img {
+        top: 140px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .novena img {
+        top: 190px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .decima img {
+        top: 240px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .undecima img {
+        top: 290px;
+        bottom: 25px;
+        left: 110px;
+    }
+
+    .duodecima img {
+        top: 90px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimatercera img {
+        top: 140px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimacuarta img {
+        top: 190px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimaquinta img {
+        top: 240px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimasexta img {
+        top: 290px;
+        bottom: 25px;
+        left: 180px;
+    }
+
+    .decimaseptima img {
+        top: 90px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .decimaoctava img {
+        top: 140px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .decimanovena img {
+        top: 190px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .vigesima img {
+        top: 240px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    .vigesimaprimera img {
+        top: 290px;
+        bottom: 25px;
+        left: 250px;
+    }
+
+    /*-------------------------------------FOOTER-------------------------------------*/
+    #informacion {
+        padding-left: 10%;
+    }
+}
+
+@media screen and (min-width:992px) and (max-width:1199px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Apartado de componetes(Fecha, Usuario, Idioma y Modo Color) le damos dirección row y otras propiedades*/
+    #apartado_superior2 {
+        display: flex !important;
+    }
+
+    /*-------------------------------------MAIN-------------------------------------*/
+    /*Le damos un tamaño a los textos de las tarjetas de ventas*/
+    .datos_ventas h3 {
+        font-size: 18px;
+    }
+
+    /*Le damos un tamaño al texto*/
+    #texto2 p {
+        margin-top: 0%;
+        margin-bottom: 0%;
+        font-size: 8px;
+    }
+
+    /*-------------------------------------------Calendario-------------------------------------------*/
+    .calendar-events {
+        display: none;
+    }
+
+    /*---------------------------------PERFIL---------------------------------*/
+    .imagen_perfil img {
+        width: 230px;
+        height: 230px;
+        border-radius: 100%;
+        margin-bottom: 5%;
+        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+    }
+
+    /*----------------------------------Reservaciones-------------------------*/
+    .plano1 {
+        margin-left: 10%;
+        width: 500px;
+        height: 500px;
+    }
+
+    .plano2 {
+        margin-left: 10%;
+        width: 500px;
+        height: 500px;
+    }
+
+    .plano3 {
+        margin-left: 10%;
+        width: 500px;
+        height: 700px;
+    }
+}
+
+@media screen and (min-width:1200px) and (max-width:1365px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Apartado de componetes(Fecha, Usuario, Idioma y Modo Color) le damos dirección row y otras propiedades*/
+    #apartado_superior2 {
+        display: flex !important;
+    }
+
+    /*-------------------------------------------Calendario-------------------------------------------*/
+    .calendar-events {
+        display: none;
+    }
+}
+
+@media screen and (min-width:1366px) and (max-width:2560px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Apartado de componetes(Fecha, Usuario, Idioma y Modo Color) le damos dirección row y otras propiedades*/
+    #apartado_superior2 {
+        display: flex !important;
+    }
+
+    #observaciones_notificacion .card-body {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #observaciones_notificacion img {
+        width: 60px;
+        height: 60px;
+        margin-right: 20px;
+    }
+
+    .imagen_reporte {
+        width: 15%;
+        text-align: center;
+    }
+
+    .datos_reportes p {
+        font-size: medium;
+    }
+
+    .imagen_reservacion img {
+        height: 40%;
+    }
+}
+
+@media screen and (min-height:600px) and (max-height:758px) {
+    #imagen_qr {
+        width: 400px;
+        height: 400px;
+    }
+
+    #imagen_contenedor_qr{
+        width: 180px;
+        height: 180px;
+    }
+}
+
+#btn_seleccion .btn {
+    background-color: #f8c4a4;
+    height: 75%;
+    width: 75%;
+}

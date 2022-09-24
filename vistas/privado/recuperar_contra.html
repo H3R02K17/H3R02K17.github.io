@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <!--Nombre de la página-->
+    <title>Koffi Soft</title>
+    <meta charset="UTF-8">
+    <!--Importamos el css de "estilo" para modificar los contenidos de la página principal-->
+    <link type="text/css" rel="stylesheet" href="../../css/privado.css" />
+    <!--Importamos el css de Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!--Importamos el css para manejar la fuente del sitio web-->
+    <link type="text/css" rel="stylesheet" href="../../css/fuente.css">
+    <!--Importar un icono para el sitio web-->
+    <link rel="icon" type="icon/png" href="../../recursos/imgs/koffisoft_logo1.png">
+    <!--Informar al navegador que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <main>
+        <div class="container-fluid" id="imagen_fondo">
+            <div class="row" id="contenido_login">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="tarjeta_recuperar">
+                    <div class="card mb-3">
+                        <form method="post" id="recuperar_contra_form">
+                            <div class="row g-0">
+                                <div class="col-md-6 image">
+                                    <img src="../../recursos/imgs/taza_cafe.png" class="img" alt="taza">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="card-body">
+                                        <div id="titulo_login">
+                                            <p>
+                                                Recuperar Contraseña
+                                            </p>
+                                            <div id="linea_login">
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <div id="icon_text">
+                                            <img src="../../recursos/icons/contra.png" alt="">
+                                            <p>Se enviará un código de recuperación a su correo enlazado a su cuenta.
+                                                Ingresa tu usuario y DUI para tu verificación</p>
+                                        </div>
+                                        <div id="txt-margin">
+                                            <label id="txtlabel" for="usuario"
+                                                class="form-label">Usuario:</label>
+                                            <input type="text" class="form-control" id="usuario" name="usuario" value="" size="60" maxlength="60"
+                                                required autocomplete="off">
+                                        </div>
+                                        <div id="txt-margin">
+                                            <label id="txtlabel" for="dui" class="form-label">DUI:</label>
+                                            <input type="text" class="form-control" id="dui" name="dui" value="" size="10" maxlength="10"
+                                                required autocomplete="off">
+                                        </div>
+                                        <div id="btn-margin">
+                                            <button id="boton_codigo" class="btn btn-primary" type="submit">Enviar Código</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!--Apartado del footer-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <!--Apartado de terminos del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10" id="informacion">
+                    <p>TÉRMINOS Y CONDICIONES DEL SITIO</p>
+                    <p>Copyright &copy; 2022 Koffi Soft. Todos los derechos reservados</p>
+                    <p>Teléfono: (503)2222-8888</p>
+                    <p>Correo electrónico: KoffiSoft@gmail.com</p>
+                </div>
+                <!--Link del sitio público del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="sitio_publico">
+                    <a href="../publico/index.html"><img src="../../recursos/imgs/koffisoft_logo1.png" alt=""></a>
+                    <a href="../publico/index.html">Ir a Sitio Web Público</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS, luego los demás scripts -->
+    <script type="text/javascript" src="../../recursos/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../recursos/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../recursos/js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../../controladores/componentes.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/recuperar_contra.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <!--Nombre de la página-->
+    <title>Koffi Soft Proveedores</title>
+    <meta charset="UTF-8">
+    <!--Importamos el css de "estilo" para modificar los contenidos de la página principal-->
+    <link type="text/css" rel="stylesheet" href="../../css/privado.css" />
+    <!--Importamos el css de Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!--Importamos el css para manejar la fuente del sitio web-->
+    <link type="text/css" rel="stylesheet" href="../../css/fuente.css">
+    <!--Importar un icono para el sitio web-->
+    <link rel="icon" type="icon/png" href="../../recursos/imgs/koffisoft_logo1.png">
+    <!--Informar al navegador que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Navbar lateral izquierdo-->
+            <div class="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-3" id="menu">
+                <nav>
+                    <!--Contenedor con botones laterales y logo-->
+                    <div id="contenedor_botones">
+                        <!--Logo del sitio en el Nav lateral-->
+                        <div id="logo_nav">
+                            <img src="../../recursos/imgs/koffisoft_logo2.png" alt="logo">
+                        </div>
+                        <!--Botones del sitio en el Nav lateral-->
+                        <div id="botones">
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--MAIN-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9" id="main_principal">
+                <main>
+                    <div class="container-fluid">
+                        <!--Apartado Titulo y componetes(Fecha, Usuario, Idioma y Modo Color)-->
+                        <div class="row shadow-lg" id="menu2">
+                            <!--Titulo-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="apartado_superior1">
+                                <div id="titulo apartado">
+                                    <h2>Administrar Proveedores</h2>
+                                </div>
+                            </div>
+                            <!--Componentes (Fecha, Usuario, Idioma y Modo Color)-->
+                            <div class="col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-8 d-none d-sm-block"
+                                id="apartado_superior2">
+
+                            </div>
+                            <div class="col-xs-8 col-sm-5 col-md-4 d-lg-none" id="apartado_movil">
+                                <a class="navbar-brand" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                    <img src="../../recursos/icons/menu2.png" alt="" width="30" height="24">
+                                </a>
+                            </div>
+                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
+                                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+                            </div>
+                        </div>
+                        <div class="row" id="seccion_main">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <div class="container-fluid">
+                                    <!--Columna de categorias-->
+                                    <div class="row">
+                                        <!-- Boton Modal Agregar -->
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+                                            id="buscador_agregar">
+                                            <form class="d-flex buscador" method="post" id="search-form" autocomplete="off">
+                                                <input class="form-control me-2" type="search" placeholder="Buscar..."
+                                                    aria-label="Search" name="search" id="search">
+                                                <button data-bs-toggle="tooltip" data-bs-placement="top"
+                                                    title="Buscar por Nombre del Proveedor, Dirección, Teléfono"
+                                                    type="submit"><img src="../../recursos/icons/buscar.png" alt="lupa"
+                                                        height="22"></button>
+                                            </form>
+                                            <button type="button" class="btn btn-success" onclick="openCreate()">Agregar
+                                                Proveedor +</button>
+                                        </div>
+                                        <!-- Modal Agregar-->
+                                        <div id="agregar_proveedor" class="modal" role="dialog">
+                                            <div id="modal_agregar"
+                                                class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                                                <form method="post" id="agregar_form" autocomplete="off">
+                                                    <!-- Modal Contenido-->
+                                                    <div class="modal-content">
+                                                        <div class="container-fluid">
+                                                            <div class="modal-header">
+                                                                <h4 id="titulo_proveedor" class="modal-title">Agregar
+                                                                    Proveedor</h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="row">
+                                                                    <div class="col-sm-12 col-md-12">
+                                                                        <div class="mb-3">
+                                                                            <label for="proveedorC"
+                                                                                class="form-label">Nombre
+                                                                                Proveedor:</label>
+                                                                            <input id="proveedorC" name="proveedorC"
+                                                                                class="form-control form-control-sm"
+                                                                                type="text" required>
+                                                                        </div>
+                                                                        <div class="mb-3">
+                                                                            <label for="direccion_proveedor"
+                                                                                class="form-label">Dirección
+                                                                                Proveedor:</label>
+                                                                            <textarea id="direccion_proveedor"
+                                                                                name="direccion_proveedor"
+                                                                                class="form-control" rows="3"
+                                                                                required></textarea>
+                                                                        </div>
+                                                                        <div class="mb-3">
+                                                                            <label for="telefono_proveedor"
+                                                                                class="form-label">Teléfono
+                                                                                Proveedor:</label>
+                                                                            <input id="telefono_proveedor"
+                                                                                name="telefono_proveedor"
+                                                                                class="form-control form-control-sm"
+                                                                                type="text" placeholder="0000-0000"
+                                                                                required>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="boton_modal">
+                                                                    <button type="submit" class="btn btn-success"
+                                                                        data-dismiss="modal">Agregar Proveedor</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- Modal Modificar-->
+                                        <div id="modificar" class="modal" role="dialog">
+                                            <div
+                                                class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                                                <form method="post" id="modificar_form" autocomplete="off">
+                                                    <input type="number" id="idproveedorM" name="idproveedorM"
+                                                        class="visually-hidden">
+                                                    <!-- Modal Contenido-->
+                                                    <div class="modal-content">
+                                                        <div class="container-fluid">
+                                                            <div class="modal-header">
+                                                                <h4 id="titulo_proveedor" class="modal-title">
+                                                                    Modificar
+                                                                    Proveedor</h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post" id="modificar_proveedor_form"
+                                                                    autocomplete="off">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12 col-md-12">
+                                                                            <div class="mb-3">
+                                                                                <label for="proveedorM"
+                                                                                    class="form-label">Nombre
+                                                                                    Proveedor:</label>
+                                                                                <input id="proveedorM" name="proveedorM"
+                                                                                    class="form-control form-control-sm"
+                                                                                    type="text" required>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="direccion_proveedorM"
+                                                                                    class="form-label">Dirección
+                                                                                    Proveedor:</label>
+                                                                                <textarea id="direccion_proveedorM"
+                                                                                    class="form-control"
+                                                                                    name="direccion_proveedorM" rows="3"
+                                                                                    required></textarea>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="telefono_proveedorM"
+                                                                                    class="form-label">Teléfono
+                                                                                    Proveedor:</label>
+                                                                                <input id="telefono_proveedorM"
+                                                                                    name="telefono_proveedorM"
+                                                                                    class="form-control form-control-sm"
+                                                                                    type="text" placeholder="0000-0000"
+                                                                                    required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="boton_modal">
+                                                                        <button type="submit" class="btn btn-info"
+                                                                            data-dismiss="modal">Modificar
+                                                                            Proveedor</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!-- Modal Eliminar-->
+                                        <div id="eliminar" class="modal" role="dialog">
+                                            <div
+                                                class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-sm">
+                                                <form method="post" id="eliminar_form">
+                                                    <input type="number" id="idproveedorD" name="idproveedorD"
+                                                        class="visually-hidden">
+                                                    <!-- Modal Contenido-->
+                                                    <div class="modal-content">
+                                                        <div class="container-fluid">
+                                                            <div class="modal-header">
+                                                                <h4 id="titulo_proveedor" class="modal-title">
+                                                                    Eliminar
+                                                                    Proveedor</h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post" id="eliminar_proveedor_form">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-12 col-md-12">
+                                                                            <div class="mb-3">
+                                                                                <label for="proveedorD"
+                                                                                    class="form-label">Nombre
+                                                                                    Proveedor:</label>
+                                                                                <input id="proveedorD" name="proveedorD"
+                                                                                    class="form-control form-control-sm"
+                                                                                    type="text" required>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="direccion_proveedorD"
+                                                                                    class="form-label">Dirección
+                                                                                    Proveedor:</label>
+                                                                                <textarea id="direccion_proveedorD"
+                                                                                    name="direccion_proveedorD"
+                                                                                    class="form-control" rows="3"
+                                                                                    required></textarea>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="telefono_proveedorD"
+                                                                                    class="form-label">Teléfono
+                                                                                    Proveedor:</label>
+                                                                                <input id="telefono_proveedorD"
+                                                                                    name="telefono_proveedorD"
+                                                                                    class="form-control form-control-sm"
+                                                                                    type="text" placeholder="0000-0000"
+                                                                                    required>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="boton_modal">
+                                                                        <button type="submit" class="btn btn-danger"
+                                                                            data-dismiss="modal">Eliminar
+                                                                            Proveedor</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <!--Columna de tabla-->
+                                        <div id="tablas_datos" class="row">
+                                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                                <div class="table-responsive">
+                                                    <table
+                                                        class="table table-striped table-hover table-bordered text-center">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Nombre Proveedor</th>
+                                                                <th>Direción Proveedor</th>
+                                                                <th>Teléfono Proveedor</th>
+                                                                <th>Acciones</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody id="tbproveedor">
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination">
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Previous">
+                                                            <span aria-hidden="true">&laquo;</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                    <li class="page-item">
+                                                        <a class="page-link" href="#" aria-label="Next">
+                                                            <span aria-hidden="true">&raquo;</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <!--Apartado del footer-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <!--Apartado de terminos del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10" id="informacion">
+                    <p>TÉRMINOS Y CONDICIONES DEL SITIO</p>
+                    <p>Copyright &copy; 2022 Koffi Soft. Todos los derechos reservados</p>
+                    <p>Teléfono: (503)2222-8888</p>
+                    <p>Correo electrónico: KoffiSoft@gmail.com</p>
+                </div>
+                <!--Link del sitio público del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="sitio_publico">
+                    <a href="../publico/index.html"><img src="../../recursos/imgs/koffisoft_logo1.png" alt=""></a>
+                    <a href="../publico/index.html">Ir a Sitio Web Público</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS, luego los demás scripts -->
+    <script type="text/javascript" src="../../recursos/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../recursos/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../recursos/js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../../controladores/componentes.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/online.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/proveedores.js"></script>
+</body>
+
+</html>

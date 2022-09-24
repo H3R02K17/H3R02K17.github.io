@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <!--Nombre de la página-->
+    <title>Koffi Soft Reservaciones</title>
+    <meta charset="UTF-8">
+    <!--Importamos el css de "estilo" para modificar los contenidos de la página principal-->
+    <link type="text/css" rel="stylesheet" href="../../css/privado.css" />
+    <!--Importamos el css de Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!--Importamos el css para manejar la fuente del sitio web-->
+    <link type="text/css" rel="stylesheet" href="../../css/fuente.css">
+    <!--Importar un icono para el sitio web-->
+    <link rel="icon" type="icon/png" href="../../recursos/imgs/koffisoft_logo1.png">
+    <!--Informar al navegador que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Navbar lateral izquierdo-->
+            <div class="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-3" id="menu">
+                <nav>
+                    <!--Contenedor con botones laterales y logo-->
+                    <div id="contenedor_botones">
+                        <!--Logo del sitio en el Nav lateral-->
+                        <div id="logo_nav">
+                            <img src="../../recursos/imgs/koffisoft_logo2.png" alt="logo">
+                        </div>
+                        <!--Botones del sitio en el Nav lateral-->
+                        <div id="botones">
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--MAIN-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9" id="main_principal">
+                <main>
+                    <div class="container-fluid">
+                        <!--Apartado Titulo y componetes(Fecha, Usuario, Idioma y Modo Color)-->
+                        <div class="row shadow-lg" id="menu2">
+                            <!--Titulo-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="apartado_superior1">
+                                <div id="titulo apartado">
+                                    <h2>Reservaciones</h2>
+                                </div>
+                            </div>
+                            <!--Componentes (Fecha, Usuario, Idioma y Modo Color)-->
+                            <div class="col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-8 d-none d-sm-block"
+                                id="apartado_superior2">
+
+                            </div>
+                            <div class="col-xs-8 col-sm-5 col-md-4 d-lg-none" id="apartado_movil">
+                                <a class="navbar-brand" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                    <img src="../../recursos/icons/menu2.png" alt="" width="30" height="24">
+                                </a>
+                            </div>
+                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
+                                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+                            </div>
+                        </div>
+                        <div class="row" id="seccion_main">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <div class="container reservacion_main">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item botonreserva" role="presentation">
+                                            <button class="nav-link active" id="crear_reservacion_tab"
+                                                data-bs-toggle="pill" data-bs-target="#crear_reservacion" type="button"
+                                                role="tab" aria-controls="crear_reservacion" aria-selected="true">Crear
+                                                Reservación</button>
+                                        </li>
+                                        <li class="nav-item botonreserva" role="presentation">
+                                            <button class="nav-link" id="ver_reservacion-tab" data-bs-toggle="pill"
+                                                data-bs-target="#ver_reservacion" type="button" role="tab"
+                                                aria-controls="ver_reservacion" aria-selected="false">Ver
+                                                Reservaciones</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <!--Apartado para crear reservaciones-->
+                                        <div class="tab-pane fade show active" id="crear_reservacion" role="tabpanel"
+                                            aria-labelledby="crear_reservacion_tab">
+                                            <form method="post" id="reservaciones_form" autocomplete="off">
+                                                <div class="row">
+                                                    <div
+                                                        class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                                        <select multiple name="mesas[]" id="mesas"
+                                                            class="visually-hidden">
+                                                        </select>
+                                                        <div
+                                                            class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 texto_reservacion">
+                                                            <label for="nombre_cliente" class="form-label">Nombres
+                                                                Cliente:</label>
+                                                            <input type="text" class="form-control" id="nombre_cliente"
+                                                                name="nombre_cliente" maxlength="50">
+                                                        </div>
+                                                        <div
+                                                            class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 texto_reservacion">
+                                                            <label for="apellidos_cliente" class="form-label">Apellidos
+                                                                cliente:</label>
+                                                            <input type="text" class="form-control"
+                                                                id="apellidos_cliente" name="apellidos_cliente"
+                                                                maxlength="50" required>
+                                                        </div>
+                                                        <div
+                                                            class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 texto_reservacion">
+                                                            <label for="telefono_cliente" class="form-label">Teléfono
+                                                                del
+                                                                cliente:</label>
+                                                            <input type="text" class="form-control"
+                                                                placeholder="0000-0000" id="telefono_cliente"
+                                                                name="telefono_cliente" maxlength="9" size="9" required>
+                                                        </div>
+                                                        <div
+                                                            class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 texto_reservacion">
+                                                            <label for="correo_cliente" class="form-label">Correo
+                                                                del
+                                                                cliente:</label>
+                                                            <input type="email" class="form-control" id="correo_cliente"
+                                                                name="correo_cliente" maxlength="50" size="50"
+                                                                data-bs-toggle="tooltip" data-bs-placement="right"
+                                                                title="No requerido si no posee uno">
+                                                        </div>
+                                                    </div>
+                                                    <div
+                                                        class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+                                                        <div
+                                                            class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 texto_reservacion">
+                                                            <label for="fecha_reservacion" class="form-label">Fecha de
+                                                                la reservación:</label>
+                                                            <div class="activar_edicion">
+                                                                <input type="date" id="fecha_reservacion"
+                                                                    name="fecha_reservacion" class="form-control"
+                                                                    min="2022-01-01" max="2030-12-31" required readonly>
+                                                                <a href="#" onclick="seleccionarFecha()"><img
+                                                                        src="../../recursos/icons/reiniciar.png"
+                                                                        alt="reiniciar"></a>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 texto_reservacion">
+                                                            <label for="hora_reservacion" class="form-label">Hora
+                                                                reservación:</label>
+                                                            <select class="form-control form-select"
+                                                                id="hora_reservacion" name="hora_reservacion" onchange="mesasReservadas()" required>
+                                                                <option selected disabled>Seleccione la hora de la reservación
+                                                                </option>
+                                                                <option value="09:00:00">9:00 AM</option>
+                                                                <option value="09:30:00">9:30 AM</option>
+                                                                <option value="10:00:00">10:00 AM</option>
+                                                                <option value="10:30:00">10:30 AM</option>
+                                                                <option value="11:00:00">11:00 AM</option>
+                                                                <option value="11:30:00">11:30 AM</option>
+                                                                <option value="12:00:00">12:00 PM</option>
+                                                                <option value="12:30:00">12:30 PM</option>
+                                                                <option value="13:00:00">13:00 PM</option>
+                                                                <option value="13:30:00">13:30 PM</option>
+                                                                <option value="14:00:00">14:00 PM</option>
+                                                                <option value="14:30:00">14:00 PM</option>
+                                                                <option value="15:00:00">15:00 PM</option>
+                                                                <option value="15:30:00">15:30 PM</option>
+                                                                <option value="16:00:00">16:00 PM</option>
+                                                                <option value="16:30:00">16:30 PM</option>
+                                                                <option value="17:00:00">17:00 PM</option>
+                                                            </select>
+                                                        </div>
+                                                        <div
+                                                            class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 texto_reservacion">
+                                                            <label for="cantidad_personas" class="form-label">Cantidad
+                                                                de
+                                                                personas:</label>
+                                                            <select class="form-select" id="cantidad_personas"
+                                                                name="cantidad_personas" data-bs-toggle="tooltip"
+                                                                data-bs-placement="left"
+                                                                title="Máxima capacidad de 60 personas"
+                                                                onchange="planesPersonas(this.value)" required>
+                                                                <option selected>Cantidad de personas</option>
+                                                                <option value="1">Plan de Pareja</option>
+                                                                <option value="1">Plan de 4 personas</option>
+                                                                <option value="1">Plan de 8 personas</option>
+                                                                <option value="3">Plan de 12 personas</option>
+                                                                <option value="3">Plan de 16 personas</option>
+                                                                <option value="3">Plan de 24 personas</option>
+                                                                <option value="2">Plan de 28 personas</option>
+                                                                <option value="2">Plan de 40 personas</option>
+                                                                <option value="2">Plan de 60 personas</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="mesasreservar"
+                                                        class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                                        <div class="container-fluid">
+                                                            <div class="texto_reservacion2">
+                                                                <p>
+                                                                    SELECCIONA LAS MESAS A RESERVAR:
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="container-fluid">
+                                                            <ul class="nav nav-pills mb-3" id="pills-tab"
+                                                                role="tablist">
+                                                                <li class="nav-item botonreserva" role="presentation">
+                                                                    <button class="nav-link active" id="plano1-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#plano1"
+                                                                        type="button" role="tab"
+                                                                        aria-controls="pills-plano1"
+                                                                        aria-selected="true">Plano 1</button>
+                                                                </li>
+                                                                <li class="nav-item botonreserva" role="presentation">
+                                                                    <button class="nav-link" id="plano2-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#plano2"
+                                                                        type="button" role="tab"
+                                                                        aria-controls="pills-plano2"
+                                                                        aria-selected="false">Plano 2</button>
+                                                                </li>
+                                                                <li class="nav-item botonreserva" role="presentation">
+                                                                    <button class="nav-link" id="plano3-tab"
+                                                                        data-bs-toggle="pill" data-bs-target="#plano3"
+                                                                        type="button" role="tab"
+                                                                        aria-controls="pills-plano3"
+                                                                        aria-selected="false">Plano 3</button>
+                                                                </li>
+                                                            </ul>
+                                                            <div class="tab-content contimg" id="pills-tabContent">
+                                                                <div class="tab-pane fade show active" id="plano1"
+                                                                    role="tabpanel" aria-labelledby="pills-home-tab">
+                                                                    <div class="plano1">
+                                                                        <div class="mesa primera">
+                                                                            <img onclick="anexarMesas(1, 1)" id="1"
+                                                                                src="../../recursos/icons/mesa_pareja.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa segunda">
+                                                                            <img onclick="anexarMesas(2, 2)" id="2"
+                                                                                src="../../recursos/icons/mesa_pareja.png"
+                                                                                alt="mesas"
+                                                                                class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa tercera">
+                                                                            <img onclick="anexarMesas(3, 3)" id="3"
+                                                                                src="../../recursos/icons/mesa_pareja.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa cuarta">
+                                                                            <img onclick="anexarMesas(4, 4)" id="4"
+                                                                                src="../../recursos/icons/mesa_pareja.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa quinta">
+                                                                            <img onclick="anexarMesas(5, 5)" id="5"
+                                                                                src="../../recursos/icons/mesa_pareja.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa sexta">
+                                                                            <img onclick="anexarMesas(6, 6)" id="6"
+                                                                                src="../../recursos/icons/mesa_pareja.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="plano2" role="tabpanel"
+                                                                    aria-labelledby="pills-profile-tab">
+                                                                    <div class="plano2">
+                                                                        <div class="mesa septima">
+                                                                            <img onclick="anexarMesas(7, 7)" id="7"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa octava">
+                                                                            <img onclick="anexarMesas(8, 8)" id="8"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa novena">
+                                                                            <img onclick="anexarMesas(9, 9)" id="9"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa decima">
+                                                                            <img onclick="anexarMesas(10, 10)" id="10"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa undecima">
+                                                                            <img onclick="anexarMesas(11, 11)" id="11"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa duodecima">
+                                                                            <img onclick="anexarMesas(12, 12)" id="12"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa decimatercera">
+                                                                            <img onclick="anexarMesas(13, 13)" id="13"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa decimacuarta">
+                                                                            <img onclick="anexarMesas(14, 14)" id="14"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa decimaquinta">
+                                                                            <img onclick="anexarMesas(15, 15)" id="15"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa decimasexta">
+                                                                            <img onclick="anexarMesas(16, 16)" id="16"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa decimaseptima">
+                                                                            <img onclick="anexarMesas(17, 17)" id="17"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa decimaoctava">
+                                                                            <img onclick="anexarMesas(18, 18)" id="18"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa decimanovena">
+                                                                            <img onclick="anexarMesas(19, 19)" id="19"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa vigesima">
+                                                                            <img onclick="anexarMesas(20, 20)" id="20"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa vigesimaprimera">
+                                                                            <img onclick="anexarMesas(21, 21)" id="21"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="tab-pane fade" id="plano3" role="tabpanel"
+                                                                    aria-labelledby="pills-contact-tab">
+                                                                    <div class="plano3">
+                                                                        <div class="mesa vigesimasegunda">
+                                                                            <img onclick="anexarMesas(22, 22)" id="22"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa vigesimatercera">
+                                                                            <img onclick="anexarMesas(23, 23)" id="23"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa vigesimacuarta">
+                                                                            <img onclick="anexarMesas(24, 24)" id="24"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa vigesimaquinta">
+                                                                            <img onclick="anexarMesas(25, 25)" id="25"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa vigesimasexta">
+                                                                            <img onclick="anexarMesas(26, 26)" id="26"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesa vigesimaseptima">
+                                                                            <img onclick="anexarMesas(27, 27)" id="27"
+                                                                                src="../../recursos/icons/mesas.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesav vigesimaoctava">
+                                                                            <img onclick="anexarMesas(28, 28)" id="28"
+                                                                                src="../../recursos/icons/mesa_parejav.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesav vigesimanovena">
+                                                                            <img onclick="anexarMesas(29, 29)" id="29"
+                                                                                src="../../recursos/icons/mesa_parejav.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                        <div class="mesav trigesima">
+                                                                            <img onclick="anexarMesas(30, 30)" id="30"
+                                                                                src="../../recursos/icons/mesa_parejav.png"
+                                                                                alt="mesas" class="mesa_seleccionable">
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="boton_rojo">
+                                                    <button type="submit" type="button" id="agregar_reservacion"
+                                                        class="btn">Agregar
+                                                        Reservación</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!--Apartado par ver reservaciones-->
+                                        <div class="tab-pane fade" id="ver_reservacion" role="tabpanel"
+                                            aria-labelledby="ver_reservacion-tab">
+                                            <form class="d-flex buscador_reservacion" method="post" id="thesearch">
+                                                <input class="form-control me-2" type="search" id="search" name="search"
+                                                    placeholder="Buscar" aria-label="Search">
+                                                <button type="submit"><img src="../../recursos/icons/buscar.png"
+                                                        alt="lupa" height="22"></button>
+                                            </form>
+                                            <div id="reservaciones_realizadas">
+
+                                            </div>
+                                            <!-- Modal Modificar-->
+                                            <div id="modificar_reservacion" class="modal" role="dialog">
+                                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                    <form method="post" id="modificar_reservacion_form">
+                                                        <input type="number" id="idreservacion" name="idreservacion"
+                                                            class="visually-hidden">
+                                                        <!-- Modal Contenido-->
+                                                        <div class="modal-content">
+                                                            <div class="container-fluid">
+                                                                <div class="modal-header">
+                                                                    <h4 id="titulo_reservacion" class="modal-title">
+                                                                        Modificar
+                                                                        Reservación</h4>
+                                                                    <button type="button" class="btn-close"
+                                                                        data-bs-dismiss="modal"
+                                                                        aria-label="Close"></button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="row">
+                                                                        <div class="col-sm-6 col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label for="nombre_cliente_modificar"
+                                                                                    class="form-label">Nombre
+                                                                                    Cliente:</label>
+                                                                                <input id="nombre_cliente_modificar"
+                                                                                    name="nombre_cliente_modificar"
+                                                                                    class="form-control form-control-sm"
+                                                                                    type="text" size="50" maxlength="50"
+                                                                                    required>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="apellido_cliente_modificar"
+                                                                                    class="form-label">Apellido
+                                                                                    Cliente:</label>
+                                                                                <input id="apellido_cliente_modificar"
+                                                                                    class="form-control form-control-sm"
+                                                                                    name="apellido_cliente_modificar"
+                                                                                    type="text" size="50" maxlength="50"
+                                                                                    required></input>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="telefono_cliente_modificar"
+                                                                                    class="form-label">Teléfono
+                                                                                    Cliente:</label>
+                                                                                <input id="telefono_cliente_modificar"
+                                                                                    name="telefono_cliente_modificar"
+                                                                                    class="form-control form-control-sm"
+                                                                                    type="text" placeholder="0000-0000"
+                                                                                    size="9" maxlength="9" required>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="estadoM"
+                                                                                    class="form-label">Estado de la
+                                                                                    Reservación:</label>
+                                                                                <select
+                                                                                    class="form-select form-control-sm"
+                                                                                    id="estadoM" name="estadoM"
+                                                                                    required>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-sm-6 col-md-6">
+                                                                            <div class="mb-3">
+                                                                                <label for="correo_cliente_modificar"
+                                                                                    class="form-label">Correo
+                                                                                    Cliente:</label>
+                                                                                <input id="correo_cliente_modificar"
+                                                                                    class="form-control form-control-sm"
+                                                                                    name="correo_cliente_modificar"
+                                                                                    type="email" size="50"
+                                                                                    maxlength="50" required></input>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="fecha_reservacion_modificar"
+                                                                                    class="form-label">Fecha de la
+                                                                                    reservación:</label>
+                                                                                <input type="date"
+                                                                                    id="fecha_reservacion_modificar"
+                                                                                    name="fecha_reservacion_modificar"
+                                                                                    class="form-control form-control-sm"
+                                                                                    max="2030-12-31" required>
+                                                                            </div>
+                                                                            <div class="mb-3">
+                                                                                <label for="hora_reservacion_modificar"
+                                                                                    class="form-label">Hora
+                                                                                    reservación:</label>
+                                                                                <select
+                                                                                    class="form-control form-select form-control-sm"
+                                                                                    id="hora_reservacion_modificar"
+                                                                                    name="hora_reservacion_modificar"
+                                                                                    required>
+                                                                                    <option disabled selected>Hora de la
+                                                                                        reservación</option>
+                                                                                    <option value="09:00:00">9:00 AM
+                                                                                    </option>
+                                                                                    <option value="09:30:00">9:30 AM
+                                                                                    </option>
+                                                                                    <option value="10:00:00">10:00 AM
+                                                                                    </option>
+                                                                                    <option value="10:30:00">10:30 AM
+                                                                                    </option>
+                                                                                    <option value="11:00:00">11:00 AM
+                                                                                    </option>
+                                                                                    <option value="11:30:00">11:30 AM
+                                                                                    </option>
+                                                                                    <option value="12:00:00">12:00 PM
+                                                                                    </option>
+                                                                                    <option value="12:30:00">12:30 PM
+                                                                                    </option>
+                                                                                    <option value="13:00:00">13:00 PM
+                                                                                    </option>
+                                                                                    <option value="13:30:00">13:30 PM
+                                                                                    </option>
+                                                                                    <option value="14:00:00">14:00 PM
+                                                                                    </option>
+                                                                                    <option value="14:30:00">14:00 PM
+                                                                                    </option>
+                                                                                    <option value="15:00:00">15:00 PM
+                                                                                    </option>
+                                                                                    <option value="15:30:00">15:30 PM
+                                                                                    </option>
+                                                                                    <option value="16:00:00">16:00 PM
+                                                                                    </option>
+                                                                                    <option value="16:30:00">16:30 PM
+                                                                                    </option>
+                                                                                    <option value="17:00:00">17:00 PM
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="boton_modal">
+                                                                        <a onclick="actualizarReservacion(event)"
+                                                                            class="btn btn-info">Modificar
+                                                                            Reservación</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <!--Apartado del footer-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <!--Apartado de terminos del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10" id="informacion">
+                    <p>TÉRMINOS Y CONDICIONES DEL SITIO</p>
+                    <p>Copyright &copy; 2022 Koffi Soft. Todos los derechos reservados</p>
+                    <p>Teléfono: (503)2222-8888</p>
+                    <p>Correo electrónico: KoffiSoft@gmail.com</p>
+                </div>
+                <!--Link del sitio público del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="sitio_publico">
+                    <a href="../publico/index.html"><img src="../../recursos/imgs/koffisoft_logo1.png" alt=""></a>
+                    <a href="../publico/index.html">Ir a Sitio Web Público</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS, luego los demás scripts -->
+    <script type="text/javascript" src="../../recursos/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../recursos/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../recursos/js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../../controladores/componentes.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/online.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/reservaciones.js"></script>
+</body>
+
+</html>

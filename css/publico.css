@@ -1,0 +1,1518 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    transition: all .7s ease-in-out;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/*-------------------------------------HEADER-------------------------------------*/
+
+nav {
+    width: 100%;
+    background-color: #f3c6a5;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    flex-wrap: wrap !important;
+}
+
+/*Le damos un espaciado de igual proporción a los elementos desde los lados*/
+#menu {
+    display: flex;
+    align-content: space-around;
+    justify-content: space-around;
+}
+
+/*Le damos un tamaño maximo a los botones*/
+#menu a {
+    max-width: 162px;
+}
+
+/*Le damos un propiedad al apartado superior para que cuando nos desplazemos siempre se mantenga arriba*/
+#menu.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 0%;
+    animation-duration: 1.2s;
+    animation-name: moviendose1;
+    animation-iteration-count: 1, 0;
+}
+
+/*Animación del cambio sticky al apartado superior*/
+@keyframes moviendose1 {
+    0% {
+        padding: 3%;
+    }
+
+    100% {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 0%;
+    }
+}
+
+
+/*Le asignamos un tamaño a la imagen del logo del menú*/
+#logo_nav img {
+    height: 90px;
+    width: 90px;
+}
+
+/*Le damos un tamaño a la imagen para desplegar en moviles*/
+#barra_menu img {
+    width: 40px;
+    height: 40px;
+}
+
+/*Le damos color a la fuente de los botones del menú*/
+#boton_enlace a {
+    color: #4a1f0e;
+    margin-left: 15px;
+}
+
+/*Le damos un borde inferior a los botones del menú*/
+#boton_enlace a:hover {
+    border-bottom: 2px solid #4a1f0e;
+}
+
+/*Agregamos un margen a la derecha a los botones color e idioma*/
+#opciones_personalizadas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-right: 20px;
+}
+
+/*Le damos un color a la fuente del boton de idiomas*/
+#boton_idioma {
+    color: #4a1f0e !important;
+}
+
+/*Le damos un tamaño a la imagen del boton de idiomas*/
+#boton_idioma img {
+    width: 25px;
+    height: 25px;
+}
+
+/*Le damos un tamaño a la imagen del boton de idiomas*/
+#boton_idioma button {
+    background-color: #cf9d81;
+    border-color: #cf9d81;
+    color: #4a1f0e !important;
+    font-weight: 500;
+}
+
+/*Le damos un color de fondo al boton desplegable*/
+.dropdown-menu {
+    background-color: #cf9d81 !important;
+    min-width: 115px !important;
+    max-height: 35px !important;
+}
+
+/*Le damos color de fondo y le cambiamos el color a la fuente del boton desplegable*/
+#boton_idioma a {
+    background-color: #cf9d81;
+    border-color: #cf9d81;
+    color: #4a1f0e !important;
+    font-weight: 500;
+}
+
+/*Le damos un margen izquierdo a la imagen del boton idioma*/
+#imagen_idioma {
+    margin-left: 5px;
+}
+
+/*Le damos propiedades al boton de cambio de color*/
+#boton_modo button {
+    margin-bottom: 15px;
+    height: 35px;
+    width: 140px;
+    background-color: #cf9d81;
+    border-color: #cf9d81;
+    color: #4a1f0e !important;
+    font-size: small;
+    font-weight: 500;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Le damos propiedades a las imagenes del boton de cambio de color*/
+#boton_modo img {
+    width: 18px;
+    height: 18px;
+    padding-bottom: 2px;
+}
+
+/*Creamos un cuadrado redondeado donde estará la imagen y la bolita de switch*/
+.switch {
+    height: 25px;
+    width: 45px !important;
+    background-color: #5b464f !important;
+    border-radius: 100px;
+    border: none !important;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+}
+
+/*Creamos la bolita del switch*/
+.switch::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+/*Cuando tenga la clase active cambiará el fondo del cuadrado redondeado*/
+.switch.active {
+    background-color: #4f9b99 !important;
+}
+
+/*Cuando tenga la clase active cambiará de posición la bolita del switch a la derecha*/
+.switch.active::after {
+    left: unset;
+    right: 0;
+}
+
+.tooltip-inner {
+    background-color: #4c070a !important;
+}
+
+/*-------------------------------------Menu movil-------------------------------------*/
+/*Le damos propiedades para que tenga el mismo espacio entre componentes en el menú*/
+#menu2 {
+    text-align: center;
+    display: flex !important;
+    flex-direction: row !important;
+    align-content: space-around !important;
+    justify-content: space-around !important;
+    align-items: center !important;
+}
+
+/*Le damos un propiedad al menu2 movil para que cuando nos desplazemos siempre se mantenga arriba*/
+#menu2.sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    padding: 0%;
+    animation-duration: 1s;
+    animation-name: moviendose2;
+    animation-iteration-count: 1, 0;
+}
+
+/*Animación del cambio sticky al apartado superior*/
+@keyframes moviendose2 {
+    0% {
+        padding: 4%;
+    }
+
+    100% {
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+        width: 100%;
+        padding: 0%;
+    }
+}
+
+/*Le damos un color a la fuente del boton de idiomas*/
+#boton_idioma2 {
+    color: #4a1f0e !important;
+}
+
+/*Le damos un tamaño a la imagen del boton de idiomas*/
+#boton_idioma2 img {
+    width: 25px;
+    height: 25px;
+}
+
+/*Le damos un tamaño a la imagen del boton de idiomas*/
+#boton_idioma2 button {
+    background-color: #cf9d81;
+    border-color: #cf9d81;
+    color: #4a1f0e !important;
+    font-weight: 500;
+}
+
+/*Le damos un color de fondo al boton desplegable*/
+#boton_idioma2 .dropdown-menu {
+    background-color: #cf9d81 !important;
+    min-width: 45px !important;
+    max-height: 35px !important;
+}
+
+/*Le damos color de fondo y le cambiamos el color a la fuente del boton desplegable*/
+#boton_idioma2 a {
+    background-color: #cf9d81;
+    border-color: #cf9d81;
+    color: #4a1f0e !important;
+    font-weight: 500;
+}
+
+
+#boton_modo2 button {
+    margin-bottom: 15px;
+    height: 41px;
+    width: 100%;
+    background-color: #4c070a;
+    border-color: #4c070a;
+    color: #ffffff !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#boton_modo2 img {
+    width: 18px !important;
+    height: 18px !important;
+    padding-bottom: 2px;
+}
+
+.switch2 {
+    height: 25px;
+    width: 45px !important;
+    background-color: #5b464f !important;
+    border-radius: 100px;
+    border: none !important;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    outline: none;
+}
+
+.switch2::after {
+    content: "";
+    display: block;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: #ffffff;
+    top: 0;
+    left: 0;
+    right: unset;
+    border-radius: 100px;
+    transition: .3s ease all;
+    box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, .2);
+}
+
+.switch2.active {
+    background-color: #097ceb !important;
+}
+
+.switch2.active::after {
+    left: unset;
+    right: 0;
+}
+
+/*Le asignamos un color de fondo, alineación central y color blanco a las letras del OffSet*/
+#offcanvasWithBothOptions {
+    background-color: #4c070a;
+    color: #ffffff;
+}
+
+#logo_menu_movil img {
+    width: 160px;
+    height: 160px;
+    margin-left: 27%;
+}
+
+#logo_menu_movil button {
+    margin-top: -100px;
+    opacity: 1;
+}
+
+#boton_enlace2 a {
+    padding-left: 0%;
+    width: 100%;
+    color: #ffffff;
+}
+
+#boton_enlace2 a:hover {
+    width: 100%;
+    background-color: #ffffff;
+    color: #4c070a;
+    transition: all 0.6s ease;
+}
+
+#boton_enlace2 p {
+    padding-top: 30px;
+    color: #ced4da !important;
+    margin-bottom: 5px;
+}
+
+#boton_enlace2 img {
+    margin-left: 5%;
+    width: 25px;
+    height: 25px;
+}
+
+
+
+/*-------------------------------------MAIN-------------------------------------*/
+
+#titulo {
+    text-align: center;
+    margin-top: 75px;
+    color: #4a1f0e;
+    transition: all .7s ease-in-out;
+}
+
+#linea_decorativa hr {
+    margin-top: 100px;
+    height: 2px !important;
+    width: 100%;
+    opacity: 1 !important;
+    background-color: #4c070a !important;
+}
+
+/*Modificamos los valores internos de la card para que esten alineados al centro*/
+.card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-content: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+}
+
+/*A las card le damos un tamaño y un color de fondo*/
+.card {
+    color: #4a1f0e;
+    max-width: 330px !important;
+    border-radius: 15px !important;
+    background-color: #c69378 !important;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important;
+}
+
+.card:hover {
+    box-shadow: 0 1px 3rem rgba(76, 7, 10, 1) !important;
+    transition: all 0.4s ease;
+}
+
+/*Le damos un tamaño a las card*/
+.card img {
+    width: 300px;
+    height: 260px;
+    border-radius: 5px !important;
+    margin-bottom: 15px;
+}
+
+.card-body a {
+    border: solid #4c070a;
+    border-radius: 8px;
+}
+
+#tarjetas {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    display: flex !important;
+    align-content: center !important;
+    justify-content: center !important;
+}
+
+#tarjetas a {
+    color: #4a1f0e;
+}
+
+#tarjetas a:hover {
+    color: #ffffff;
+    background-color: #4c070a;
+    padding: 4px 10px 4px 10px;
+}
+
+#nav_movil {
+    width: 100%;
+}
+
+
+
+/*--------------------------Tarjetas de Productos--------------------------*/
+
+/*Le damos espaciado a la tarjeta de productos*/
+#tarjetas_productos {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    display: flex !important;
+    align-content: center !important;
+    justify-content: center !important;
+}
+
+/*A las tarjetas le damos un tamaño y un color de fondo*/
+#tarjetas_productos .card {
+    color: #4a1f0e;
+    max-width: 250px !important;
+    border-radius: 15px !important;
+    background-color: #c69378 !important;
+}
+
+/*Le damos una alineación central a la tarjeta de productos*/
+#tarjetas_productos .card-body {
+    display: flex !important;
+    flex-direction: row !important;
+    align-content: center !important;
+    justify-content: center !important;
+    flex-wrap: wrap;
+}
+
+/*A la imagen en la tarjeta de producto le asignamos un tamaño*/
+#tarjetas_productos img {
+    width: 230px;
+    height: 210px;
+    border-radius: 5px !important;
+    margin-bottom: 15px;
+}
+
+/*Le damos un tamaño al contenedor donde está el nombre y precio del producto*/
+#tarjetas_productos .container-fluid {
+    width: 100% !important;
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+    margin-right: 15px !important;
+    margin-left: 0px !important;
+}
+
+/*Le damos propiedades al h6 del nombre del producto*/
+#detalle_producto h6 {
+    width: 145px;
+    text-align: left;
+    white-space: initial;
+    overflow: hidden;
+    font-weight: 400;
+}
+
+/*Le damos un color a las letras del boton del producto*/
+#detalle_producto a {
+    color: #4a1f0e;
+}
+
+/*Le damos propiedades al boton de producto cuando se sobrepone el mouse*/
+#detalle_producto a:hover {
+    color: #ffffff;
+    background-color: #4c070a;
+}
+
+
+/*--------------------------DETALLE DE PRODUCTOS--------------------------*/
+
+.tarjeta_detalle_producto {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-left: 8px;
+    padding-right: 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border-radius: 35px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.imagen_detalle_producto {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagen_detalle_producto img {
+    width: 80%;
+    height: 80%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    border-radius: 35px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contenido_detalle_producto {
+    width: 50%;
+}
+
+.contenido_detalle_producto h1 {
+    color: #4a1f0e;
+}
+
+.contenido_detalle_producto p {
+    color: #4a1f0e;
+}
+
+.contenido_detalle_producto h5 {
+    color: #503c3d;
+}
+
+
+.contenido_detalle_producto h6 {
+    color: #5b464f;
+}
+
+.contenido_detalle_producto h4 {
+    color: #057554;
+}
+
+.letras_rojas {
+    color: #4c070a !important;
+}
+
+.contenido_detalle_producto hr {
+    background-color: #777676;
+    box-shadow: 0px 2px 10px 2px #bfbfbf;
+    width: 100%;
+}
+
+/*--------------------------Footer del sitio--------------------------*/
+
+/*Le damos un color al footer*/
+footer {
+    background-color: #4c070a;
+}
+
+/*Le damos una alineación central al apartado de redes sociales*/
+#redes_sociales {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/*Asignamos color al titulo "Siguenos"*/
+#redes_sociales h4 {
+    color: #ffff;
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+/*Le damos un tamaño al logo en redes sociales*/
+#logo_redes img {
+    width: 160px;
+    height: 160px;
+    padding-bottom: 20px;
+}
+
+/*Le damos un justificado a las imagenes de redes sociales*/
+#redes {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-around;
+    padding-bottom: 20px;
+}
+
+/*Le asignamos un tamaño a los iconos de redes sociales*/
+#redes img {
+    width: 30px;
+    height: 30px;
+}
+
+/*Creamos una linea vertical*/
+div.vertical-line {
+    width: 2px;
+    background-color: white;
+    height: 100%;
+    float: left;
+}
+
+/*Le cambiamos el color a las imagenes de redes al colocarse encima el mouse*/
+.instagram:hover {
+    /*filter: dota de efectos gráficos como el desenfoque o cambio de color*/
+    /*drop-shadow añade efectos de sombra alrededor del marco de un elemento*/
+    filter: saturate(100%) opacity(1) drop-shadow(2px 2px 5px #ee5ea3);
+}
+
+/*Le cambiamos el color a las imagenes de redes al colocarse encima el mouse*/
+.facebook:hover {
+    /*filter: dota de efectos gráficos como el desenfoque o cambio de color*/
+    /*drop-shadow añade efectos de sombra alrededor del marco de un elemento*/
+    filter: saturate(100) opacity(1) drop-shadow(2px 2px 5px #097ceb);
+}
+
+.tiktok:hover {
+    /*filter: dota de efectos gráficos como el desenfoque o cambio de color*/
+    /*drop-shadow añade efectos de sombra alrededor del marco de un elemento*/
+    filter: saturate(100%) opacity(1) drop-shadow(2px 2px 5px #7c41da);
+}
+
+/*El apartado de opciones del footer lo ordenamos en columnas*/
+#informacion {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-top: 25px;
+}
+
+/*Le damos un color al texto de opciones en el footer*/
+#informacion p {
+    color: #ffff;
+    font-weight: 400;
+    font-size: medium;
+}
+
+/*A los botones de opciones del footer le asignamos color y tamaño*/
+#informacion a {
+    color: #ffff;
+    font-size: small;
+    font-weight: 300;
+}
+
+/*Al apartado de terminos lo ordenamos el columna*/
+#terminos {
+    padding-top: 50px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+/*Al apartado de terminos le asignamos un color*/
+#terminos p {
+    color: #ffffff;
+    font-size: small;
+    font-style: normal;
+    font-weight: 300;
+}
+
+/*---------------------------------------MODO NOCTURNO---------------------------------------*/
+
+body.dark {
+    background: #503c3d !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark #titulo {
+    color: #ffffff;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .pagination_site nav {
+    background-color: #503c3d !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .pagination_site nav {
+    background-color: #503c3d !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark p {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark h6 {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark h5 {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark h4 {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark h3 {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark h2 {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark h1 {
+    color: #ffffff !important;
+    transition: all .7s ease-in-out;
+}
+
+body.dark .cafe_sticky:before {
+    background: linear-gradient(180deg, rgba(80, 60, 61, 1) 0%, rgba(80, 60, 61, 1) 90%, rgba(80, 60, 61, 0) 100%);
+    transition: all .7s ease-in-out;
+}
+
+body.dark .tarjeta_contactanos h4{
+    color: #4a1f0e !important;
+}
+
+/*------------------------------------ALERGENOS------------------------------------*/
+
+#tabla_alergenos {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#tabla_alergenos h4 {
+    margin-top: 2%;
+}
+
+#btn_seleccion .btn {
+    background-color: #f8c4a4;
+}
+
+#titulo_alerg {
+    text-align: center;
+}
+
+#titulo h4 {
+    margin-bottom: 5%;
+}
+
+/*------------------------------------Pagination------------------------------------*/
+.pagination_site nav {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+}
+
+.page-link {
+    color: #4c070a !important;
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #ffffff !important;
+    background-color: #4c070a !important;
+    border-color: #4c070a !important;
+}
+
+/*------------------------------------------EMPRESA--------------------------------------------------------*/
+.titulo_empresa {
+    text-align: left;
+    margin-top: 4% !important;
+    color: #4a1f0e;
+    transition: all .7s ease-in-out;
+}
+
+.imagen_empresa {
+    padding: 0px !important;
+}
+
+.titulo_empresa h2 {
+    margin-top: 4%;
+}
+
+.titulo_empresa p {
+    margin-bottom: 8%;
+}
+
+/*------------------------------------------Políticas de Servicio--------------------------------------------------------*/
+
+.politica_servicio p {
+    text-align: left;
+}
+
+/*------------------------------------------Ubicación--------------------------------------------------------*/
+
+.mapa_local {
+    display: flex;
+    justify-content: center;
+}
+
+#mapa_local2 {
+    margin-top: 3%;
+    margin-left: 1%;
+    margin-bottom: 3%;
+}
+
+.ubi_texto {
+    color: #4a1f0e;
+    margin-top: 4% !important;
+    margin-bottom: 10%;
+}
+
+/*------------------------------------------Senderismo------------------------------------------*/
+.senderismo {
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+.senderismo p {
+    color: #4a1f0e;
+}
+
+.senderismo h6 {
+    color: #4a1f0e;
+    font-size: 20px !important;
+    font-weight: bold !important;
+    line-height: 1.5 !important;
+}
+
+.imagen_senderismo {
+    display: flex;
+    justify-content: center;
+}
+
+.texto_senderismo_izq {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
+.texto_senderismo_izq p {
+    text-align: left;
+}
+
+.texto_senderismo_der {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+    text-align: right;
+}
+
+.imagen_senderismo img {
+    width: 75%;
+    border-radius: 50px;
+}
+
+.cafe_sticky {
+    height: 1100px !important;
+    width: 100% !important;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index: 102 !important;
+}
+
+.cafe_sticky:before {
+    content: "";
+    position: absolute;
+    margin-top: 10px;
+    width: 80px;
+    height: 150px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
+    z-index: 150 !important;
+    left: calc(50% - 50px);
+    transition: all .7s ease-in-out;
+}
+
+.linea_vertical {
+    height: 1090px !important;
+    width: 100% !important;
+    margin-top: 10px !important;
+    position: absolute;
+    right: 5px;
+    display: flex;
+    justify-content: center;
+    z-index: 100 !important;
+}
+
+img.cafeImg {
+    position: sticky;
+    width: 50px;
+    top: 198px;
+    height: 50px;
+    margin-left: -5px;
+    background-position: center;
+    object-fit: scale-down;
+    transform: scaleX(1.0001);
+}
+
+.imagen_senderismo_final {
+    width: 100% !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/*------------------------------------------CONTÁCTO------------------------------------------*/
+.titulo_contacto{
+    text-align: center;
+    color: #4a1f0e;
+}
+
+.apartado_contactos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: #4a1f0e;
+    justify-content: space-around;
+}
+
+.redes_contactanos{
+    text-align: right;
+}
+
+.redes_sociales_contactos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    justify-self: center;
+    align-items: center;
+}
+
+.redes_sociales_contactos p{
+    margin: 0px;
+}
+
+.redes_sociales_contactos img{
+    width: 45px;
+    height: 45px;
+    margin-right: 15px;
+}
+
+div.vertical-line2{
+    width: 2px;
+    background-color: #4c070a;
+    height: 90%;
+    float: left;
+}
+
+.tarjeta_contactanos{
+    padding: 20px;
+    border-radius: 35px;
+    margin-bottom: 80px;
+    color: #4a1f0e;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.centrar_boton{
+    text-align: center;
+}
+
+.tarjeta_contactanos .btn-danger{
+    color: #ffffff !important;
+    background-color: #4c070a !important;
+}
+
+.tarjeta_contactanos .btn-danger:hover{
+    color: #4c070a !important;
+    font-weight: 500;
+    background-color: #ffffff !important;
+}
+
+/*------------------------------------------SOBRE NOSOTROS------------------------------------------*/
+.imagen_equipo{
+    text-align: center;
+}
+
+.imagen_equipo img{
+    width: 95%;
+    height: 100%;
+}
+
+.imagen_miembros{
+    text-align: center;
+}
+
+.imagen_miembros img{
+    width: 295px;
+    height: 310px;
+}
+
+/*+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++RESPONSIVE+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*para celulares*/
+@media screen and (max-width: 374px) {
+
+    /*--------------------------Footer del sitio--------------------------*/
+    /*Le damos un color al texto de opciones en el footer*/
+    #enlaces_footer {
+        text-align: center;
+    }
+
+    #logo_menu_movil img {
+        margin-left: 15%;
+    }
+
+    #offcanvasWithBothOptions {
+        max-width: 80%;
+    }
+
+    /*--------------------------Senderismo--------------------------*/
+    .cafe_sticky {
+        display: none !important;
+    }
+
+    .cafe_sticky:before {
+        display: none !important;
+    }
+
+    .linea_vertical {
+        display: none !important;
+    }
+
+    img.cafeImg {
+        display: none !important;
+    }
+
+    .texto_senderismo_izq p {
+        text-align: center;
+    }
+
+    .texto_senderismo_izq h6 {
+        text-align: center;
+    }
+
+    .texto_senderismo_der p {
+        text-align: center;
+    }
+
+    .texto_senderismo_der h6 {
+        text-align: center;
+    }
+
+    .imagen_senderismo img {
+        margin-bottom: 5%;
+    }
+
+    /*----------------------------Detalle del producto----------------------------*/
+
+    .tarjeta_detalle_producto {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .imagen_detalle_producto {
+        width: 100%;
+    }
+
+    .contenido_detalle_producto {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width:375px) and (max-width:576px) {
+    #offcanvasWithBothOptions {
+        max-width: 80%;
+    }
+
+    /*--------------------------Footer del sitio--------------------------*/
+    /*Le damos un color al texto de opciones en el footer*/
+    #enlaces_footer {
+        text-align: center;
+    }
+
+    /*--------------------------Senderismo--------------------------*/
+    .cafe_sticky {
+        display: none !important;
+    }
+
+    .cafe_sticky:before {
+        display: none !important;
+    }
+
+    .linea_vertical {
+        display: none !important;
+    }
+
+    img.cafeImg {
+        display: none !important;
+    }
+
+    .texto_senderismo_izq p {
+        text-align: center;
+    }
+
+    .texto_senderismo_izq h6 {
+        text-align: center;
+    }
+
+    .texto_senderismo_der p {
+        text-align: center;
+    }
+
+    .texto_senderismo_der h6 {
+        text-align: center;
+    }
+
+    .imagen_senderismo img {
+        margin-bottom: 5%;
+    }
+
+    /*----------------------------Detalle del producto----------------------------*/
+
+    .tarjeta_detalle_producto {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .imagen_detalle_producto {
+        width: 100%;
+    }
+
+    .contenido_detalle_producto {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:644px) {
+
+    /*-------------------------------------MAIN-------------------------------------*/
+    /*A la imagen en la tarjeta de producto le asignamos un tamaño*/
+    #tarjetas_productos img {
+        min-width: 160px;
+        max-height: 160px;
+        margin-bottom: 15px;
+    }
+
+    /*Le damos un tamaño al contenedor donde está el nombre y precio del producto*/
+    #tarjetas_productos .container-fluid {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    /*Le damos propiedades al h6 del nombre del producto*/
+    #detalle_producto h6 {
+        max-width: 80px;
+        font-size: 12px;
+        margin-left: -5px;
+    }
+
+    /*Le damos un color a las letras del boton del producto*/
+    #detalle_producto a {
+        font-size: medium;
+        width: 65px;
+        margin-left: -10px;
+        padding: .375rem 0rem;
+        padding: .375rem 0rem;
+    }
+
+    /*--------------------------Footer del sitio--------------------------*/
+    /*Le damos un color al texto de opciones en el footer*/
+    #enlaces_footer {
+        text-align: center;
+    }
+
+    /*--------------------------Senderismo--------------------------*/
+    .cafe_sticky {
+        display: none !important;
+    }
+
+    .cafe_sticky:before {
+        display: none !important;
+    }
+
+    .linea_vertical {
+        display: none !important;
+    }
+
+    img.cafeImg {
+        display: none !important;
+    }
+
+    .texto_senderismo_izq p {
+        text-align: center;
+    }
+
+    .texto_senderismo_izq h6 {
+        text-align: center;
+    }
+
+    .texto_senderismo_der p {
+        text-align: center;
+    }
+
+    .texto_senderismo_der h6 {
+        text-align: center;
+    }
+
+    .imagen_senderismo img {
+        margin-bottom: 5%;
+    }
+
+    /*----------------------------Detalle del producto----------------------------*/
+
+    .tarjeta_detalle_producto {
+        margin-top: 35px;
+        margin-bottom: 25px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .imagen_detalle_producto {
+        width: 100%;
+    }
+
+    .contenido_detalle_producto {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media screen and (min-width:645px) and (max-width:768px) {
+
+    /*----------------------------Main----------------------------*/
+    /*A la imagen en la tarjeta de producto le asignamos un tamaño*/
+    #tarjetas_productos img {
+        min-width: 190px;
+        height: 190px;
+        margin-bottom: 15px;
+    }
+
+    /*Le damos un tamaño al contenedor donde está el nombre y precio del producto*/
+    #tarjetas_productos .container-fluid {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    /*Le damos propiedades al h6 del nombre del producto*/
+    #detalle_producto h6 {
+        max-width: 95px;
+        font-size: medium;
+        margin-left: -5px;
+    }
+
+    /*Le damos un color a las letras del boton del producto*/
+    #detalle_producto a {
+        font-size: medium;
+        width: 65px;
+        margin-left: -10px;
+        padding: .375rem 0rem;
+        padding: .375rem 0rem;
+    }
+
+    /*--------------------------Footer del sitio--------------------------*/
+    /*Le damos un color al texto de opciones en el footer*/
+    #enlaces_footer {
+        text-align: center;
+    }
+
+    /*--------------------------Senderismo--------------------------*/
+    .cafe_sticky {
+        display: none !important;
+    }
+
+    .cafe_sticky:before {
+        display: none !important;
+    }
+
+    .linea_vertical {
+        display: none !important;
+    }
+
+    img.cafeImg {
+        display: none !important;
+    }
+
+    .texto_senderismo_izq p {
+        text-align: center;
+    }
+
+    .texto_senderismo_izq h6 {
+        text-align: center;
+    }
+
+    .texto_senderismo_der p {
+        text-align: center;
+    }
+
+    .texto_senderismo_der h6 {
+        text-align: center;
+    }
+
+    .imagen_senderismo img {
+        margin-bottom: 5%;
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:909px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Le damos color a la fuente de los botones del menú*/
+    #boton_enlace a {
+        margin-left: 0px;
+        font-size: small;
+    }
+
+    /*----------------------------Main----------------------------*/
+    /*Le damos un tamaño a las card*/
+    .card img {
+        width: 230px;
+        height: 210px;
+        border-radius: 5px !important;
+        margin-bottom: 15px;
+    }
+
+    /*Le damos un tamaño al contenedor donde está el nombre y precio del producto*/
+    #tarjetas_productos .container-fluid {
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    /*A la imagen en la tarjeta de producto le asignamos un tamaño*/
+    #tarjetas_productos img {
+        min-width: 160px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    /*Le damos espaciado a la tarjeta de productos*/
+    #tarjetas_productos {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        display: flex !important;
+        align-content: center !important;
+        justify-content: center !important;
+    }
+
+    /*Le damos propiedades al h6 del nombre del producto*/
+    #detalle_producto h6 {
+        min-width: 70px;
+        max-width: 77px;
+        font-size: small;
+    }
+
+    #detalle_producto a {
+        font-size: small;
+        width: 59px;
+        margin-left: -10px;
+        padding: .375rem 0rem;
+    }
+
+    /*--------------------------Senderismo--------------------------*/
+    .cafe_sticky {
+        display: none !important;
+    }
+
+    .cafe_sticky:before {
+        display: none !important;
+    }
+
+    .linea_vertical {
+        display: none !important;
+    }
+
+    img.cafeImg {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width:910px) and (max-width:1133px) {
+
+    /*----------------------------Header----------------------------*/
+    /*Le damos color a la fuente de los botones del menú*/
+    #boton_enlace a {
+        margin-left: 0px;
+        font-size: medium;
+    }
+
+    /*----------------------------Main----------------------------*/
+    /*Le damos un tamaño a las card*/
+    .card img {
+        width: 270px;
+        height: 250px;
+        border-radius: 5px !important;
+        margin-bottom: 15px;
+    }
+
+    /*A la imagen en la tarjeta de producto le asignamos un tamaño*/
+    #tarjetas_productos img {
+        min-width: 190px;
+        height: 150px;
+        margin-bottom: 15px;
+    }
+
+    /*Le damos espaciado a la tarjeta de productos*/
+    #tarjetas_productos {
+        padding-top: 25px;
+        padding-bottom: 25px;
+        display: flex !important;
+        align-content: center !important;
+        justify-content: center !important;
+    }
+
+    /*Le damos propiedades al h6 del nombre del producto*/
+    #detalle_producto h6 {
+        min-width: 70px;
+        max-width: 100px;
+        font-size: medium;
+    }
+
+    /*Le damos un color a las letras del boton del producto*/
+    #detalle_producto a {
+        font-size: medium;
+        width: 70px;
+        margin-left: -17px;
+    }
+
+    .cafe_sticky {
+        height: 770px !important;
+    }
+
+    .linea_vertical {
+        height: 760px !important;
+    }
+}
+
+@media screen and (min-width:1133px) and (max-width:1365px) {
+    .cafe_sticky {
+        height: 1000px !important;
+    }
+
+    .linea_vertical {
+        height: 990px !important;
+    }
+}
+
+@media screen and (min-width:1550px) and (max-width:1729px) {
+    .cafe_sticky {
+        height: 1300px !important;
+    }
+
+    .linea_vertical {
+        height: 1290px !important;
+    }
+}
+
+@media screen and (min-width:1730px) and (max-width:1920px) {
+    .cafe_sticky {
+        height: 1500px !important;
+    }
+
+    .linea_vertical {
+        height: 1490px !important;
+    }
+}

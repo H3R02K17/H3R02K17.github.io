@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <!--Nombre de la página-->
+    <title>Koffi Soft Políticas</title>
+    <meta charset="UTF-8">
+    <!--Importamos el css de "estilo" para modificar los contenidos de la página principal-->
+    <link type="text/css" rel="stylesheet" href="../../css/publico.css" />
+    <!--Importamos el css de Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!--Importamos el css para manejar la fuente del sitio web-->
+    <link type="text/css" rel="stylesheet" href="../../css/fuente.css">
+    <!--Importar un icono para el sitio web-->
+    <link rel="icon" type="icon/png" href="../../recursos/imgs/koffisoft_logo2.png">
+    <!--Informar al navegador que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <header>
+        <div class="d-none d-md-block">
+            <!--Menú del sitio-->
+            <nav id="menu" class="navbar navbar-expand shadow">
+                <div class="container-fluid">
+                    <!--Agregamos el logo del sitio-->
+                    <a class="navbar-brand" href="#" id="logo_nav">
+                        <img src="../../recursos/imgs/koffisoft_logo1.png" alt="">
+                    </a>
+                    <div class="collapse navbar-collapse">
+                        <!--Creamos los botones que tendrá el menú-->
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="boton_enlace">
+
+                        </ul>
+                    </div>
+                </div>
+                <div id="opciones_personalizadas">
+                    <!--Creamos la opción de modo oscuro y claro-->
+                    <div id="boton_modo">
+                        <button class="btn btn-secondary btn-sm">
+                            Modo Claro
+                            <a class="switch" id="switch" onclick="ModoNocturno()">
+                                <span>
+                                    <i><img src="../../recursos/icons/sun.png" alt=""></i>
+                                </span>
+                                <span>
+                                    <i><img src="../../recursos/icons/moon.png" alt=""></i>
+                                </span>
+                            </a>
+                        </button>
+                    </div>
+                    <!--Creamos la opción de idiomas que tendrá el sitio-->
+                    <div id="boton_idioma">
+                        <div class="btn-group">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Español<img src="../../recursos/icons/español.png">
+                            </button>
+                            <ul id="opciones" class="dropdown-menu">
+                                <a class="dropdown-item btn-sm" id="idioma" data-toggle="tooltip" data-placement="left"
+                                    data-html="true" href="../public/index.html">English<img id="imagen_idioma"
+                                        src="../../recursos/icons/england.png"></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--Menu de movil y tablets-->
+        <div class="d-md-none">
+            <nav id="menu2" class="navbar shadow">
+                <div class="container">
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                        <!--Creamos la opción de idiomas que tendrá el sitio-->
+                        <div id="boton_idioma2">
+                            <div class="btn-group">
+                                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    ES<img src="../../recursos/icons/español.png">
+                                </button>
+                                <ul id="opciones" class="dropdown-menu">
+                                    <a class="dropdown-item btn-sm" id="idioma" data-toggle="tooltip"
+                                        data-placement="left" data-html="true" href="../public/index.html">EN<img id="imagen_idioma"
+                                            src="../../recursos/icons/england.png"></a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-8 col-md-8">
+                        <!--Agregamos el logo del sitio-->
+                        <a class="navbar-brand" href="#" id="logo_nav">
+                            <img src="../../recursos/imgs/koffisoft_logo1.png" alt="">
+                        </a>
+                    </div>
+                    <div class="col-xs-2 col-sm-2 col-md-2">
+                        <a class="navbar-brand" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                            <img src="../../recursos/icons/menu.png" alt="" width="30" height="24">
+                        </a>
+                    </div>
+                    <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
+                        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header" id="logo_menu_movil">
+                            <img src="../../recursos/imgs/koffisoft_logo2.png" alt="logo_blanco">
+                            <button type="button" class="btn-close btn-close-white text-reset"
+                                data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="boton_enlace2">
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!--Contenedor del main-->
+        <div class="container-fluid">
+            <!--Columna del titulo-->
+            <div class="row">
+                <!--Titulo que abarca el ancho del sitio-->
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 politica_servicio" id="titulo">
+                    <h1 class="center mb-4">Politica de Privacidad</h1>
+                    <p><b>1. Política de enlaces y exenciones de responsabilidad</b></p>
+                    <!--Creamos el id subtema para poder editar o hacerle estilos a nuestros subtemas-->
+                    <p>Koffi Soft no se hace responsable del contenido de las páginas web a las que
+                        pueda acceder el usuario a través de los enlaces establecidos en sus sitios web y declara que en
+                        ningún caso examinará
+                        ni ejercitará ningún tipo de control sobre el contenido de otras páginas de la red. Asimismo,
+                        tampoco garantiza la disponibilidad técnica, exactitud, veracidad, validez o legalidad de
+                        páginas ajenas a su
+                        propiedad a las que se pueda acceder a través de los enlaces.
+                    </p>
+                    <p>
+                        Koffi Soft declaran que han adoptado todas las medidas necesarias para evitar cualquier daño
+                        que pueda derivarse de la navegación por sus páginas web.
+                        En consecuencia, Koffi Soft no se hace responsable, en ningún caso, de los eventuales daños que
+                        pueda sufrir el usuario a causa de la navegación por Internet.
+                    </p>
+                    <p>
+                        Koffi Soft no se responsabilizan de los daños o perjuicios de cualquier tipo producidos en el
+                        Usuario que traigan causa de fallos o desconexiones en las redes de telecomunicaciones que
+                        produzcan
+                        la suspensión, cancelación, instalación o interrupción del servicio de la web durante la
+                        prestación del mismo o con carácter previo
+                    </p>
+                    <p>
+                        El acceso a la web: Koffi-Soft.com no implica la obligación por parte de la empresa de controlar
+                        la ausencia de virus o cualquier otro elemento informático dañino. Corresponde al Usuario, en
+                        todo caso,
+                        la disponibilidad de herramientas adecuadas para la detección y desinfección de programas
+                        informáticos dañinos.
+                    </p>
+                    <p>
+                        Koffi Soft no se responsabiliza de los daños producidos en los equipos informáticos, documentos
+                        y/o ficheros de los Usuarios o de terceros durante la prestación del servicio en el Portal.
+                    </p>
+                    <p>
+                        <b>2. Publicidad </b>
+                    </p>
+                    <p>
+                        La web: Koffi-Soft.com podrá alojar contenidos publicitarios o patrocinados. Los anunciantes o
+                        patrocinadores son los únicos responsables de asegurarse que el material remitido para su
+                        inclusión
+                        en la
+                        web cumple con las leyes que en cada caso puedan ser de aplicación. Koffi Soft no serán
+                        responsables de cualquier error, inexactitud o irregularidad que puedan contener los contenidos
+                        publicitarios
+                        o de los patrocinadores
+                    </p>
+                    <p>
+                        <b>3. Sellos de confianza</b>
+                    </p>
+                    <p class="mb-5">
+                        Nuestros ingredientes tienen los mejores sellos de confianza, teniendo en ellos la mejor
+                        calidad,
+                        la mejor sanatización y la mejor coccion en comidas. Nuestros productos tienen una fecha de
+                        caducidad que
+                        al momento de usarlos ocupamos los que tienen fecha vigente y los que no los desechamos, para
+                        proporcionarle
+                        un servicio increíble y confiable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="redes_sociales">
+                    <h4>SIGUENOS</h4>
+                    <a href="" id="logo_redes"><img src="../../recursos/imgs/koffisoft_logo2.png" alt="logo"></a>
+                    <div id="redes">
+                        <a href="https://www.facebook.com/Ikal-Caf%C3%A9-SV-1092973257539952/?ref=py_c"><img
+                                src="../../recursos/icons/facebook.png" alt="facebook" class="facebook"></a>
+                        <a href="https://www.instagram.com/ikalcafe_2019/?hl=es"><img
+                                src="../../recursos/icons/instagram.png" alt="instagram" class="instagram"></a>
+                        <a href="https://www.tiktok.com/@luluzc_z?is_from_webapp=1&sender_device=pc"><img src="../../recursos/icons/tiktok.png" alt="tiktok" class="tiktok"></a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10">
+                    <div class="container-fluid" id="enlaces_footer">
+                        <div class="row">
+                            <div class="col-md-1 col-lg-1 col-xl-1 col-xxl-1" id="informacion">
+                                <div class="d-none d-md-block vertical-line"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="informacion">
+                                <p>Explorar</p>
+                                <a href="index.html">Menú</a>
+                                <a href="">Reservaciones</a>
+                                <a href="ubicacion.html">Ubicación</a>
+                                <a href="senderismo.html">Senderismo</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="informacion">
+                                <p>Atención al Cliente</p>
+                                <a href="contactanos.html">Contáctanos</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="informacion">
+                                <p>Empresa</p>
+                                <a href="empresa.html">Empresa</a>
+                                <a href="creadores.html">Creadores</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="informacion">
+                                <p>Información extra</p>
+                                <a href="alergenos.html">Alergenos</a>
+                                <a href="">Descargar Menú</a>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 col-xxl-3" id="informacion">
+                                <p>Políticas de Servicio</p>
+                                <a href="legal.html">Aviso Legal</a>
+                                <a href="politica_privacidad.html">Politica de Privacidad</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12" id="terminos">
+                                <p>TÉRMINOS Y CONDICIONES DEL SITIO</p>
+                                <p>Copyright &copy; 2022 Koffi Soft. Todos los derechos reservados</p>
+                                <p>Teléfono: (503)2222-8888</p>
+                                <p>Correo electrónico: KoffiSoft@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS, luego los demás scripts -->
+    <script type="text/javascript" src="../../recursos/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../recursos/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../recursos/js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../../controladores/componentes.js"></script>
+    <script type="text/javascript" src="../../controladores/publico/online.js"></script>
+</body>
+
+</html>

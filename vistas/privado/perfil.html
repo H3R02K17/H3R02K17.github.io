@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <!--Nombre de la página-->
+    <title>Koffi Soft Perfil</title>
+    <meta charset="UTF-8">
+    <!--Importamos el css de "estilo" para modificar los contenidos de la página principal-->
+    <link type="text/css" rel="stylesheet" href="../../css/privado.css" />
+    <!--Importamos el css de Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!--Importamos el css para manejar la fuente del sitio web-->
+    <link type="text/css" rel="stylesheet" href="../../css/fuente.css">
+    <!--Importar un icono para el sitio web-->
+    <link rel="icon" type="icon/png" href="../../recursos/imgs/koffisoft_logo1.png">
+    <!--Informar al navegador que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Navbar lateral izquierdo-->
+            <div class="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-3" id="menu">
+                <nav>
+                    <!--Contenedor con botones laterales y logo-->
+                    <div id="contenedor_botones">
+                        <!--Logo del sitio en el Nav lateral-->
+                        <div id="logo_nav">
+                            <img src="../../recursos/imgs/koffisoft_logo2.png" alt="logo">
+                        </div>
+                        <!--Botones del sitio en el Nav lateral-->
+                        <div id="botones">
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--MAIN-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9" id="main_principal">
+                <main>
+                    <div class="container-fluid">
+                        <!--Apartado Titulo y componetes(Fecha, Usuario, Idioma y Modo Color)-->
+                        <div class="row shadow-lg" id="menu2">
+                            <!--Titulo-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="apartado_superior1">
+                                <div id="titulo apartado">
+                                    <h2>Perfil</h2>
+                                </div>
+                            </div>
+                            <!--Componentes (Fecha, Usuario, Idioma y Modo Color)-->
+                            <div class="col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-8 d-none d-sm-block"
+                                id="apartado_superior2">
+
+                            </div>
+                            <div class="col-xs-8 col-sm-5 col-md-4 d-lg-none" id="apartado_movil">
+                                <a class="navbar-brand" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                    <img src="../../recursos/icons/menu2.png" alt="" width="30" height="24">
+                                </a>
+                            </div>
+                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
+                                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+                            </div>
+                        </div>
+                        <div class="row" id="seccion_main">
+                            <form class="row" method="post" id="perfil_form" autocomplete="off">
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                    <div class="container">
+                                        <div class="saludo_imagen_perfil" id="imagen_perfil">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                    <div class="container-fluid">
+                                        <div class="row perfil_contenido">
+                                            <div class="mt-3">
+                                                <label for="nombre" class="form-label"><b>Nombre:</b></label>
+                                                <input class="form-control form-control-sm" type="text" id="nombre"
+                                                    name="nombre" required disabled>
+                                            </div>
+                                            <div class="mt-3">
+                                                <label for="apellido" class="form-label"><b>Apellido:</b></label>
+                                                <input class="form-control form-control-sm" type="text" id="apellido"
+                                                    name="apellido" required disabled>
+                                            </div>
+                                            <div class="mt-3">
+                                                <label for="dui" class="form-label"><b>DUI:</b></label>
+                                                <input class="form-control form-control-sm" type="text" id="dui"
+                                                    name="dui" required disabled>
+                                            </div>
+                                            <div class="mt-3">
+                                                <label for="nit" class="form-label"><b>NIT:</b></label>
+                                                <input class="form-control form-control-sm" type="text" id="nit"
+                                                    name="nit" required disabled>
+                                            </div>
+                                            <div class="mt-3">
+                                                <label for="fecha_nacimiento" class="form-label"><b>Fecha de
+                                                        Nacimiento:</b></label>
+                                                <input class="form-control form-control-sm" type="text"
+                                                    id="fecha_nacimiento" name="fecha_nacimiento" required disabled>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 col-xxl-4">
+                                    <div class="container-fluid">
+                                        <div class="row perfil_contenido">
+                                            <div class="mt-3">
+                                                <label for="tipo_usuario" class="form-label"><b>Tipo de
+                                                        Usuario:</b></label>
+                                                <input class="form-control form-control-sm" type="text"
+                                                    id="tipo_usuario" name="tipo_usuario" required disabled>
+                                            </div>
+                                            <div class="mt-3">
+                                                <label for="telefono" id="lbtelefono"
+                                                    class="form-label"><b>Teléfono:</b></label>
+                                                <div class="activar_edicion">
+                                                    <input class="form-control form-control-sm" type="text"
+                                                        id="telefono" name="telefono" size="9" maxlength="9" required
+                                                        readonly>
+                                                    <a href="#" onclick="habilitarMtelefono()"><img
+                                                            src="../../recursos/icons/modificar2.png" alt="editar"></a>
+                                                </div>
+                                            </div>
+                                            <div class="mt-3">
+                                                <div class="activar_edicion">
+                                                    <label for="correo" id="lbusuario"
+                                                        class="form-label"><b>Correo:</b></label>
+                                                    <span>*Se utiliza para mandar e-mails*</span>
+                                                </div>
+                                                <div class="activar_edicion">
+                                                    <input class="form-control form-control-sm" type="text" id="correo"
+                                                        name="correo" size="40" maxlength="40" required readonly>
+                                                    <a href="#" onclick="habilitarMusuario()"><img
+                                                            src="../../recursos/icons/modificar2.png" alt="editar"></a>
+                                                </div>
+                                            </div>
+                                            <div class="mt-5">
+                                                <a type="button" class="btn btn-danger"
+                                                    onclick="abrirModalActualizarContra()">Cambiar contraseña</a>
+                                            </div>
+                                            <div class="mt-4">
+                                                <a id="generateQR" type="button" class="btn btn-danger">Autentificación
+                                                    en 2 pasos</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 imagen_gif_perfil">
+                                    <img src="../../recursos/gif/koffi_soft.gif" alt="gif">
+                                </div>
+                                <div
+                                    class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 imagen_gif_perfil">
+                                    <button type="submit" class="btn btn-info" data-dismiss="modal">Guardar
+                                        Cambios</button>
+                                </div>
+                            </form>
+                            <!-- Modal Modificar-->
+                            <div id="modificar" class="modal" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal">
+                                    <form method="post" id="actualizar_contra_form" autocomplete="off">
+                                        <!-- Modal Contenido-->
+                                        <div class="modal-content">
+                                            <div class="container-fluid">
+                                                <div class="modal-header">
+                                                    <h4 id="titulo_proveedor" class="modal-title">
+                                                        Actualizar Contraseña</h4>
+                                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <div class="row">
+                                                        <div class="col-sm-12 col-md-12">
+                                                            <div>
+                                                                <label for="contrasenia" id="lbcontra"
+                                                                    class="form-label"><b>Ingrese la contraseña
+                                                                        actual:</b></label>
+                                                                <div class="activar_edicion">
+                                                                    <input type="password" class="form-control"
+                                                                        id="contrasenia" name="contrasenia"
+                                                                        data-length="60" size="60" maxlength="60"
+                                                                        required>
+                                                                    <img src="../../recursos/icons/ocultar.png"
+                                                                        id="ocultar" alt="mostrar"
+                                                                        onclick="mostrarContrasena()" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="mt-3">
+                                                                <label for="confirmar_contrasenia"
+                                                                    id="lblconfirmar_contra" class="form-label"><b>Nueva
+                                                                        contraseña:</b></label>
+                                                                <div class="activar_edicion">
+                                                                    <input type="password" class="form-control"
+                                                                        id="confirmar_contrasenia"
+                                                                        name="confirmar_contrasenia" data-length="60"
+                                                                        size="60" maxlength="60" required>
+                                                                    <img src="../../recursos/icons/ocultar.png"
+                                                                        id="ocultar2" alt="mostrar"
+                                                                        onclick="mostrarContrasena2()" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="mt-3 mb-3">
+                                                                <label for="confirmar_nueva_contrasenia"
+                                                                    id="lblconfirmar_nueva_contra"
+                                                                    class="form-label"><b>Confirmar nueva
+                                                                        contraseña:</b></label>
+                                                                <div class="activar_edicion">
+                                                                    <input type="password" class="form-control"
+                                                                        id="confirmar_nueva_contrasenia"
+                                                                        name="confirmar_nueva_contrasenia"
+                                                                        data-length="60" size="60" maxlength="60"
+                                                                        required>
+                                                                    <img src="../../recursos/icons/ocultar.png"
+                                                                        id="ocultar3" alt="mostrar"
+                                                                        onclick="mostrarContrasena3()" />
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div id="boton_modal">
+                                                        <button type="submit" class="btn btn-info">Actualizar
+                                                            Contraseña</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div id="twoFactor" class="modal" role="dialog">
+                                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal">
+                                    <!-- Modal Contenido-->
+                                    <div class="modal-content">
+                                        <div class="container-fluid">
+                                            <div class="modal-header">
+                                                <h4 id="titulo_proveedor" class="modal-title">
+                                                    Autentificación en 2 pasos</h4>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-12">
+                                                        <div class="text-center">
+                                                            <label for="contrasenia" id="lbcontra"
+                                                                class="form-label"><b>1. Para activar el segundo
+                                                                    factor de autenticacion instale Google
+                                                                    Authenticator en su telefono y escanee el codigo
+                                                                    QR.</b></label>
+                                                            <img id="imgQR" src="" alt="Código QR">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div id="boton_modal">
+                                                    <button data-bs-dismiss="modal"
+                                                        class="btn btn-info">Activar</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <!--Apartado del footer-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <!--Apartado de terminos del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10" id="informacion">
+                    <p>TÉRMINOS Y CONDICIONES DEL SITIO</p>
+                    <p>Copyright &copy; 2022 Koffi Soft. Todos los derechos reservados</p>
+                    <p>Teléfono: (503)2222-8888</p>
+                    <p>Correo electrónico: KoffiSoft@gmail.com</p>
+                </div>
+                <!--Link del sitio público del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="sitio_publico">
+                    <a href="../publico/index.html"><img src="../../recursos/imgs/koffisoft_logo1.png" alt=""></a>
+                    <a href="../publico/index.html">Ir a Sitio Web Público</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS, luego los demás scripts -->
+    <script type="text/javascript" src="../../recursos/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../recursos/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../recursos/js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../../controladores/componentes.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/online.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/perfil.js"></script>
+    <script type="text/javascript" src="../../controladores/validaciones.js"></script>
+</body>
+
+</html>

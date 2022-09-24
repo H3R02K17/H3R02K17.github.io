@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="ES">
+
+<head>
+    <!--Nombre de la página-->
+    <title>Koffi Soft Reservaciones</title>
+    <meta charset="UTF-8">
+    <!--Importamos el css de "estilo" para modificar los contenidos de la página principal-->
+    <link type="text/css" rel="stylesheet" href="../../css/privado.css" />
+    <!--Importamos el css de Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+    <!--Importamos el css para manejar la fuente del sitio web-->
+    <link type="text/css" rel="stylesheet" href="../../css/fuente.css">
+    <!--Importar un icono para el sitio web-->
+    <link rel="icon" type="icon/png" href="../../recursos/imgs/koffisoft_logo1.png">
+    <!--Informar al navegador que el sitio web está optimizado para dispositivos móviles-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!--Navbar lateral izquierdo-->
+            <div class="d-none d-lg-block col-lg-3 col-xl-3 col-xxl-3" id="menu">
+                <nav>
+                    <!--Contenedor con botones laterales y logo-->
+                    <div id="contenedor_botones">
+                        <!--Logo del sitio en el Nav lateral-->
+                        <div id="logo_nav">
+                            <img src="../../recursos/imgs/koffisoft_logo2.png" alt="logo">
+                        </div>
+                        <!--Botones del sitio en el Nav lateral-->
+                        <div id="botones">
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <!--MAIN-->
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-9 col-xl-9 col-xxl-9" id="main_principal">
+                <main>
+                    <div class="container-fluid">
+                        <!--Apartado Titulo y componetes(Fecha, Usuario, Idioma y Modo Color)-->
+                        <div class="row shadow-lg" id="menu2">
+                            <!--Titulo-->
+                            <div class="col-xs-8 col-sm-5 col-md-4 col-lg-4 col-xl-4 col-xxl-4" id="apartado_superior1">
+                                <div id="titulo apartado">
+                                    <h2>Reportes</h2>
+                                </div>
+                            </div>
+                            <!--Componentes (Fecha, Usuario, Idioma y Modo Color)-->
+                            <div class="col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-8 d-none d-sm-block"
+                                id="apartado_superior2">
+
+                            </div>
+                            <div class="col-xs-8 col-sm-5 col-md-4 d-lg-none" id="apartado_movil">
+                                <a class="navbar-brand" type="button" data-bs-toggle="offcanvas"
+                                    data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                                    <img src="../../recursos/icons/menu2.png" alt="" width="30" height="24">
+                                </a>
+                            </div>
+                            <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1"
+                                id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+
+                            </div>
+                        </div>
+                        <div class="row" id="seccion_main">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12">
+                                <div class="container">
+                                    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                                        <li class="nav-item boton_estadistica" role="presentation">
+                                            <button class="nav-link active" id="reportes_seccion_tab"
+                                                data-bs-toggle="pill" data-bs-target="#reportes_seccion" type="button"
+                                                role="tab" aria-controls="reportes_seccion"
+                                                aria-selected="true">Automáticas</button>
+                                        </li>
+                                        <li class="nav-item boton_estadistica" role="presentation">
+                                            <button class="nav-link" id="reporte_personalizado-tab"
+                                                data-bs-toggle="pill" data-bs-target="#reporte_personalizado"
+                                                type="button" role="tab" aria-controls="reporte_personalizado"
+                                                aria-selected="false">Personalizadas</button>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content" id="pills-tabContent">
+                                        <!--Apartado para reportes-->
+                                        <div class="tab-pane fade show active" id="reportes_seccion" role="tabpanel"
+                                            aria-labelledby="reportes_seccion_tab">
+                                            <div class="row">
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Mostrar los ingredientes y su cantidad</b></p>
+                                                        <p>El reporte ayudará a visualizar la cantidad de existencia
+                                                            de los ingredientes</p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a class="btn btn-danger"
+                                                            onclick="openReporteIngredientesCantidad()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Mostrar los ingredientes de cada producto</b></p>
+                                                        <p>El reporte ayudará a visualizar todos los ingredientes
+                                                            que son utilizados en la preparación de cada producto.
+                                                        </p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a class="btn btn-danger"
+                                                            onclick="openReporteProductosIngrediente()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Mostrar las reservaciones por estado</b></p>
+                                                        <p>El reporte ayudará a visualizar las reservaciones por
+                                                            estado, ordenadas de fechas más cercanas a más antiguas
+                                                            en estado pendiente</p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a class="btn btn-danger"
+                                                            onclick="openReservaciones()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Reporte de venta de productos que se encuentran con
+                                                                descuento</b></p>
+                                                        <p>El reporte ayudará a visualizar los productos que poseen
+                                                            un descuento</p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a class="btn btn-danger"
+                                                            onclick="openReporteProductosVendidosDescuento()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Reporte de productos vendidos</b></p>
+                                                        <p>El reporte ayudará a visualizar los productos vendidos y
+                                                            cuanto se ha adquirido de ganancias de este</p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <!--Aqui se llama la funcion de openReporteProductosVendidos-->
+                                                        <a class="btn btn-danger"
+                                                            onclick="openReporteProductosVendidos()">Generar</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!--Apartado para reportes personalizados-->
+                                        <div class="tab-pane fade" id="reporte_personalizado" role="tabpanel"
+                                            aria-labelledby="reporte_personalizado-tab">
+                                            <div class="row">
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_edit_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Reporte de ventas personalizado</b></p>
+                                                        <p>El reporte ayudará a visualizar las ventas de manera
+                                                            personalizada del dia actual, mes actual o año actual.
+                                                        </p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#ventas_personalizado"
+                                                            onclick="limpiarFormulario()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <!--Modal para filtrar reporte-->
+                                                <div id="ventas_personalizado" class="modal" role="dialog">
+                                                    <div
+                                                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                        <!--Modal Contenido-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Generar Reporte Ventas</h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post" id="form_ventas_personalizado">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12 col-md-12">
+                                                                                <select onclick="valorReporteVentas()"
+                                                                                    class="form-select"
+                                                                                    aria-label="Default select example"
+                                                                                    id="reporteVentasPer">
+                                                                                    <option selected>Seleccione una
+                                                                                        opción:</option>
+                                                                                    <option value="1">Día Actual
+                                                                                    </option>
+                                                                                    <option value="2">Mes Actual
+                                                                                    </option>
+                                                                                    <option value="3">Año Actual
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div id="boton_modal" class="mt-3">
+                                                                                <button type="submit"
+                                                                                    class="btn btn-danger"
+                                                                                    onclick="openReporteProductosVendidosPer()">Generar
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_edit_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Reporte de inventario personalizado</b></p>
+                                                        <p>El reporte ayudará a visualizar los ingredientes que
+                                                            hayan ingresado al inventario (por Historial, por Ingrediente o  por Rango de Fechas).
+                                                        </p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a type="button" class="btn btn-danger"
+                                                            data-bs-toggle="modal"
+                                                            data-bs-target="#inventario_personalizado"
+                                                            onclick="limpiarFormulario()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <!--Modal para filtrar reporte-->
+                                                <div id="inventario_personalizado" class="modal" role="dialog">
+                                                    <div
+                                                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                        <!--Modal Contenido-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Generar Reporte Inventario
+                                                                </h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal"
+                                                                    aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post"
+                                                                    id="form_inventario_personalizado">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12 col-md-12">
+                                                                                <select onchange="valorTipoReporte(this.value)"
+                                                                                    class="form-select"
+                                                                                    aria-label="Default select example"
+                                                                                    id="tipo_historial">
+                                                                                    <option selected>Seleccione una
+                                                                                        opción:</option>
+                                                                                    <option value="1">Historial
+                                                                                    </option>
+                                                                                    <option value="2">Ingrediente
+                                                                                    </option>
+                                                                                    <option value="3">Rango de Fechas
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div id="ocultar_inputs" class="col-sm-6 col-md-6 visually-hidden mt-3">
+                                                                                <label for="fechaI2"
+                                                                                    class="form-label">Fecha
+                                                                                    inicio:</label>
+                                                                                <input type="date" id="fechaI2"
+                                                                                    name="fechaI2"
+                                                                                    class="form-control form-control-sm"
+                                                                                    required>
+                                                                            </div>
+                                                                            <div id="ocultar_inputs2" class="col-sm-6 col-md-6 visually-hidden mt-3">
+                                                                                <label for="fechaF2"
+                                                                                    class="form-label">Fecha
+                                                                                    fin:</label>
+                                                                                <input type="date" id="fechaF2"
+                                                                                    name="fechaF2"
+                                                                                    class="form-control form-control-sm"
+                                                                                    required>
+                                                                            </div>
+                                                                            <div id="boton_modal" class="mt-3">
+                                                                                <a class="btn btn-danger"
+                                                                                    onclick="openReporteIngresosProducto()">Generar</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_edit_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Reporte de productos vendidos personalizado</b></p>
+                                                        <p>El reporte ayudará a visualizar los productos vendidos
+                                                            personalizado que ayudará a visualizar los productos
+                                                            vendidos por medio de sus parametros: proveedores,
+                                                            categorias y empleados.</p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#ventas_producto_personalizado"
+                                                            onclick="limpiarFormulario()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <!--Modal para filtrar reporte-->
+                                                <div id="ventas_producto_personalizado" class="modal" role="dialog">
+                                                    <div
+                                                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                        <!--Modal Contenido-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Generar Reporte Productos
+                                                                    Vendidos</h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post"
+                                                                    id="form_ventas_producto_personalizado">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12 col-md-12">
+                                                                                <select class="form-select"
+                                                                                    onchange="seleccionFiltro(this.value)">
+                                                                                    <option value="" disabled selected>
+                                                                                        Seleccione un filtro:</option>
+                                                                                    <option value="1">Categoría</option>
+                                                                                    <option value="2">Proveedores
+                                                                                    </option>
+                                                                                    <option value="3">Empleados</option>
+                                                                                </select>
+                                                                                <select class="form-select mt-3"
+                                                                                    name="opciones_ventas"
+                                                                                    id="opciones_ventas"
+                                                                                    onchange="seleccionOpcion(this.value)"
+                                                                                    required>
+                                                                                    <option value="" disabled selected>
+                                                                                        Seleccione un filtro antes:
+                                                                                    </option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div id="boton_modal" class="mt-3">
+                                                                                <button type="submit"
+                                                                                    class="btn btn-danger">Generar</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_edit_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Reporte de observaciones del empleado
+                                                                personalizado</b></p>
+                                                        <p>El reporte ayudará a visualizar observaciones del
+                                                            empleado y que se junten por empleado.</p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a onclick="limpiarFormulario()" type="button"
+                                                            class="btn btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#observaciones_empleado">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <!--Modal para filtrar reporte-->
+                                                <div id="observaciones_empleado" class="modal" role="dialog">
+                                                    <div
+                                                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                        <!--Modal Contenido-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Generar Reporte
+                                                                    Observaciones Empleado</h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="mb-3">
+                                                                    <form class="d-flex buscador" method="post"
+                                                                        id="search-form-emp">
+                                                                        <input class="form-control me-2" type="search"
+                                                                            placeholder="Buscar..." aria-label="Search"
+                                                                            name="search-emp" id="search-emp" required>
+                                                                        <button data-bs-toggle="tooltip"
+                                                                            data-bs-placement="top"
+                                                                            title="Buscar por Usuario, Tipo Usuario, Intentos"
+                                                                            type="submit"><img
+                                                                                src="../../recursos/icons/buscar.png"
+                                                                                alt="lupa" height="22"></button>
+                                                                    </form>
+                                                                </div>
+                                                                <form method="post" id="form_observaciones_empleado"
+                                                                    name="form_observaciones_empleado">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="mb-3">
+                                                                                <p>Seleccione un empleado
+                                                                                    presionando sobre sus
+                                                                                    datos</p>
+                                                                                <div class="table-responsive"
+                                                                                    id="tablas_datos">
+                                                                                    <table
+                                                                                        class="table table-striped table-hover table-bordered text-center">
+                                                                                        <thead>
+                                                                                            <tr>
+                                                                                                <th>Nombre Empleado
+                                                                                                </th>
+                                                                                                <th>Apellido
+                                                                                                    Empleado</th>
+                                                                                                <th>Dui</th>
+                                                                                            </tr>
+                                                                                        </thead>
+                                                                                        <tbody id="tbody-rows-emple">
+                                                                                        </tbody>
+                                                                                    </table>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="col-sm-12 col-md-12">
+                                                                                <input type="number" id="idempleado"
+                                                                                    name="idempleado"
+                                                                                    class="visually-hidden">
+                                                                                <input
+                                                                                    class="form-control form-control-sm"
+                                                                                    type="text" id="empleadoR"
+                                                                                    name="empleadoR" readOnly required>
+                                                                            </div>
+                                                                            <div id="boton_modal" class="mt-3">
+                                                                                <button type="submit"
+                                                                                    class="btn btn-danger"
+                                                                                    onclick="openObservacionEmpleado(event)">Generar</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_edit_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Reporte de observaciones personalizado</b></p>
+                                                        <p>El reporte ayudará a visualizar observaciones que hayan
+                                                            sido publicadas por los empleados y por sus tipos.</p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#observaciones_tipo"
+                                                            onclick="limpiarFormulario()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <!--Modal para filtrar reporte-->
+                                                <div id="observaciones_tipo" class="modal" role="dialog">
+                                                    <div
+                                                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                        <!--Modal Contenido-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Generar Reporte Observaciones
+                                                                </h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post" id="form_observaciones_tipo">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-12 col-md-12">
+                                                                                <select
+                                                                                    onchange="valorReporteObservacionesPer(this.value)"
+                                                                                    class="form-select"
+                                                                                    aria-label="Default select example"
+                                                                                    id="reporteObserPer">
+                                                                                    <option selected>Seleccione una
+                                                                                        opción:</option>
+                                                                                    <option value="1">Accidente</option>
+                                                                                    <option value="2">Atención al
+                                                                                        cliente</option>
+                                                                                    <option value="3">Limpieza</option>
+                                                                                    <option value="4">Producto Agotado
+                                                                                    </option>
+                                                                                    <option value="5">Altercado</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div id="boton_modal" class="mt-3">
+                                                                                <button type="submit"
+                                                                                    class="btn btn-danger"
+                                                                                    onclick="openReporteObservacionesPersonalizadas()">Generar</button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="tarjeta_reportes">
+                                                    <div class="imagen_reporte">
+                                                        <img src="../../recursos/imgs/graficas/reporte_edit_icon.png"
+                                                            alt="taza">
+                                                    </div>
+                                                    <div class="datos_reportes">
+                                                        <p><b>Reporte de pedidos completados personalizado por rango
+                                                                de fechas</b></p>
+                                                        <p>El reporte ayudará a visualizar los pedidos completados
+                                                            de manera
+                                                            personalizada. En un rango de fechas del más antiguo al
+                                                            más reciente.</p>
+                                                    </div>
+                                                    <div class="boton_reporte">
+                                                        <a type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                                            data-bs-target="#pedidos_completados"
+                                                            onclick="limpiarFormulario()">Generar</a>
+                                                    </div>
+                                                </div>
+                                                <!--Modal para filtrar reporte-->
+                                                <div id="pedidos_completados" class="modal" role="dialog">
+                                                    <div
+                                                        class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                                                        <!--Modal Contenido-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title">Generar Reporte Pedidos</h4>
+                                                                <button type="button" class="btn-close"
+                                                                    data-bs-dismiss="modal" aria-label="Close"></button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <form method="post" id="form_pedidos_completados">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6 col-md-6">
+                                                                                <label for="fechaI"
+                                                                                    class="form-label">Fecha
+                                                                                    inicio:</label>
+                                                                                <input type="date" id="fechaI"
+                                                                                    name="fechaI"
+                                                                                    class="form-control form-control-sm"
+                                                                                    required>
+                                                                            </div>
+                                                                            <div class="col-sm-6 col-md-6">
+                                                                                <label for="fechaF"
+                                                                                    class="form-label">Fecha
+                                                                                    fin:</label>
+                                                                                <input type="date" id="fechaF"
+                                                                                    name="fechaF"
+                                                                                    class="form-control form-control-sm"
+                                                                                    required>
+                                                                            </div>
+                                                                            <div id="boton_modal" class="mt-3">
+                                                                                <a class="btn btn-danger"
+                                                                                    onclick="openReportePedidosCompletados()">Generar</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </div>
+    <!--Apartado del footer-->
+    <footer>
+        <div class="container-fluid">
+            <div class="row">
+                <!--Apartado de terminos del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 col-xl-10 col-xxl-10" id="informacion">
+                    <p>TÉRMINOS Y CONDICIONES DEL SITIO</p>
+                    <p>Copyright &copy; 2022 Koffi Soft. Todos los derechos reservados</p>
+                    <p>Teléfono: (503)2222-8888</p>
+                    <p>Correo electrónico: KoffiSoft@gmail.com</p>
+                </div>
+                <!--Link del sitio público del footer-->
+                <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2 col-xxl-2" id="sitio_publico">
+                    <a href="../publico/index.html"><img src="../../recursos/imgs/koffisoft_logo1.png" alt=""></a>
+                    <a href="../publico/index.html">Ir a Sitio Web Público</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- jQuery primero, luego Popper.js, luego Bootstrap JS, luego los demás scripts -->
+    <script type="text/javascript" src="../../recursos/js/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../../recursos/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="../../recursos/js/sweetalert2.all.min.js"></script>
+    <script type="text/javascript" src="../../controladores/componentes.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/online.js"></script>
+    <script type="text/javascript" src="../../controladores/privado/reportes.js"></script>
+</body>
+
+</html>
